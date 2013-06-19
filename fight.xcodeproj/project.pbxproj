@@ -18,6 +18,10 @@
 		58974834177090B800FE6C21 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58974833177090B800FE6C21 /* Default@2x.png */; };
 		58974836177090B800FE6C21 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58974835177090B800FE6C21 /* Default-568h@2x.png */; };
 		58974839177090B800FE6C21 /* fight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58974837177090B800FE6C21 /* fight.xcdatamodeld */; };
+		58974840177091D400FE6C21 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5897483F177091D400FE6C21 /* Storyboard.storyboard */; };
+		589748431770954D00FE6C21 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589748421770954D00FE6C21 /* FightViewController.m */; };
+		58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58974845177095D800FE6C21 /* FightDetailViewController.m */; };
+		5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,13 @@
 		58974833177090B800FE6C21 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		58974835177090B800FE6C21 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		58974838177090B800FE6C21 /* fight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fight.xcdatamodel; sourceTree = "<group>"; };
+		5897483F177091D400FE6C21 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		589748411770954D00FE6C21 /* FightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightViewController.h; sourceTree = "<group>"; };
+		589748421770954D00FE6C21 /* FightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightViewController.m; sourceTree = "<group>"; };
+		58974844177095D800FE6C21 /* FightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDetailViewController.h; sourceTree = "<group>"; };
+		58974845177095D800FE6C21 /* FightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDetailViewController.m; sourceTree = "<group>"; };
+		5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescriptionViewController.h; sourceTree = "<group>"; };
+		5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescriptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +98,13 @@
 				5897482E177090B800FE6C21 /* AppDelegate.h */,
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
+				5897483F177091D400FE6C21 /* Storyboard.storyboard */,
+				5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */,
+				5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */,
+				58974844177095D800FE6C21 /* FightDetailViewController.h */,
+				58974845177095D800FE6C21 /* FightDetailViewController.m */,
+				589748411770954D00FE6C21 /* FightViewController.h */,
+				589748421770954D00FE6C21 /* FightViewController.m */,
 				58974826177090B800FE6C21 /* Supporting Files */,
 			);
 			path = fight;
@@ -161,6 +179,7 @@
 				58974832177090B800FE6C21 /* Default.png in Resources */,
 				58974834177090B800FE6C21 /* Default@2x.png in Resources */,
 				58974836177090B800FE6C21 /* Default-568h@2x.png in Resources */,
+				58974840177091D400FE6C21 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +193,9 @@
 				5897482C177090B800FE6C21 /* main.m in Sources */,
 				58974830177090B800FE6C21 /* AppDelegate.m in Sources */,
 				58974839177090B800FE6C21 /* fight.xcdatamodeld in Sources */,
+				589748431770954D00FE6C21 /* FightViewController.m in Sources */,
+				58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */,
+				5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KkR-xY-ewO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Fight View Controller - Fights-->
+        <scene sceneID="eUi-eA-Sn7">
+            <objects>
+                <tableViewController id="66g-Va-FGV" customClass="FightViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nXJ-el-57o">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="MFl-Ig-1hu" detailTextLabel="Qvs-Xr-J32" style="IBUITableViewCellStyleSubtitle" id="7Tv-eB-3cJ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFl-Ig-1hu">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-Xr-J32">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <segue destination="b5t-It-1b8" kind="push" identifier="GetFight" id="4dD-ng-1ui"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="66g-Va-FGV" id="ams-DG-hyg"/>
+                            <outlet property="delegate" destination="66g-Va-FGV" id="kvF-c7-2HR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fights" id="zJC-V9-y1o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mbq-3e-9mQ">
+                            <connections>
+                                <segue destination="Ylf-JU-4uF" kind="push" id="LXy-u9-VAx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slq-ac-O5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="109"/>
+        </scene>
+        <!--Fight Description View Controller - Detail-->
+        <scene sceneID="hcx-1Y-ly9">
+            <objects>
+                <viewController id="b5t-It-1b8" customClass="FightDescriptionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m1r-j9-Xwn">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNj-Ya-NU9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="IZQ-nQ-yEF"/>
+                                    <constraint firstAttribute="height" constant="31" id="qNU-IA-ElQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Titre :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l93-hi-wGK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="jaK-Fc-xdj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adresse :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziA-8K-pkY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="YQi-vn-dqj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Places :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTq-fQ-IwB">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2D-sw-FaJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhR-lX-NGR">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZu-qk-pnx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o2D-sw-FaJ" firstAttribute="baseline" secondItem="ziA-8K-pkY" secondAttribute="baseline" type="default" id="0ju-Pv-JQ9"/>
+                            <constraint firstItem="o2D-sw-FaJ" firstAttribute="leading" secondItem="mNj-Ya-NU9" secondAttribute="leading" type="default" id="52K-TH-CAc"/>
+                            <constraint firstItem="HZu-qk-pnx" firstAttribute="leading" secondItem="o2D-sw-FaJ" secondAttribute="leading" type="default" id="52i-VB-OCa"/>
+                            <constraint firstItem="CTq-fQ-IwB" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6B8-XM-Ndg"/>
+                            <constraint firstItem="CTq-fQ-IwB" firstAttribute="top" secondItem="ziA-8K-pkY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Ul-bH-bil"/>
+                            <constraint firstItem="xhR-lX-NGR" firstAttribute="top" secondItem="m1r-j9-Xwn" secondAttribute="top" constant="93" id="DtW-T5-fLL"/>
+                            <constraint firstItem="mNj-Ya-NU9" firstAttribute="centerY" secondItem="l93-hi-wGK" secondAttribute="centerY" type="default" id="JlG-uj-QuO"/>
+                            <constraint firstItem="HZu-qk-pnx" firstAttribute="baseline" secondItem="CTq-fQ-IwB" secondAttribute="baseline" type="default" id="QwF-7K-orn"/>
+                            <constraint firstAttribute="trailing" secondItem="mNj-Ya-NU9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eij-Md-bsi"/>
+                            <constraint firstItem="ziA-8K-pkY" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hrK-G2-XIH"/>
+                            <constraint firstItem="l93-hi-wGK" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kHj-KU-0Ol"/>
+                            <constraint firstItem="mNj-Ya-NU9" firstAttribute="top" secondItem="m1r-j9-Xwn" secondAttribute="top" constant="25" id="lNn-7P-nbq"/>
+                            <constraint firstItem="xhR-lX-NGR" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nbo-HZ-EN6"/>
+                            <constraint firstItem="ziA-8K-pkY" firstAttribute="top" secondItem="l93-hi-wGK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qta-rj-kue"/>
+                            <constraint firstItem="CTq-fQ-IwB" firstAttribute="trailing" secondItem="l93-hi-wGK" secondAttribute="trailing" type="default" id="uz4-RI-Gf0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="4eu-1F-vTT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="VlC-28-jKY">
+                            <connections>
+                                <segue destination="Ylf-JU-4uF" kind="push" identifier="UpdateFight" id="BNI-ph-lkx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelAddress" destination="o2D-sw-FaJ" id="cED-fF-aJe"/>
+                        <outlet property="labelFightersNumber" destination="HZu-qk-pnx" id="CsI-tr-J5u"/>
+                        <outlet property="labelName" destination="mNj-Ya-NU9" id="1hO-uq-fUk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ode-Vg-H51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="-276"/>
+        </scene>
+        <!--Fight Detail View Controller - Ajouter-->
+        <scene sceneID="P0Z-vB-vqe">
+            <objects>
+                <viewController id="Ylf-JU-4uF" customClass="FightDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mS1-Ly-6Bf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urd-XQ-lAz">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adresse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-oK-W1g">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-I3-WDi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="kAc-LJ-YZg"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="393253951.956644">
+                                    <!--2013-06-18 13:12:31 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de participants" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-2C-JdW">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="bottom" secondItem="mS1-Ly-6Bf" secondAttribute="bottom" type="default" id="369-GM-Y29"/>
+                            <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="urd-XQ-lAz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="97l-Y7-FjM"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" type="default" id="Htn-ZZ-bqv"/>
+                            <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="mS1-Ly-6Bf" secondAttribute="top" constant="20" symbolic="YES" type="default" id="RcP-qx-5PR"/>
+                            <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="T3j-pl-N0J"/>
+                            <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bTS-AI-5Yq"/>
+                            <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cKO-3d-OAS"/>
+                            <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="Ae5-oK-W1g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gsN-Cf-Ew9"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="trailing" secondItem="mS1-Ly-6Bf" secondAttribute="trailing" type="default" id="mWe-ql-Qcf"/>
+                            <constraint firstItem="1gV-2C-JdW" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pHc-n8-7IN"/>
+                            <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s9z-iy-0JX"/>
+                            <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPM-QC-Bv0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ajouter" id="5HD-Dt-MvP">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O4F-1w-K6U">
+                            <connections>
+                                <action selector="cancel:" destination="Ylf-JU-4uF" id="gc0-Bf-DdK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="aQb-Jh-aKu">
+                            <connections>
+                                <action selector="save:" destination="Ylf-JU-4uF" id="d1K-37-hHl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressTextField" destination="Ae5-oK-W1g" id="xAk-6q-QNE"/>
+                        <outlet property="fighternumberTextField" destination="1gV-2C-JdW" id="aeK-NN-xQE"/>
+                        <outlet property="nameTextField" destination="urd-XQ-lAz" id="rRk-6D-bjG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afS-8N-W75" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="482"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ehj-PF-VQU">
+            <objects>
+                <navigationController id="KkR-xY-ewO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nq-oF-OY1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="66g-Va-FGV" kind="relationship" relationship="rootViewController" id="cv8-5Y-ZGy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-Ao-fVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="109"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FightDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelFightersNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FightDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="fighternumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FightViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="BNI-ph-lkx"/>
+    </inferredMetricsTieBreakers>
+</document>
