@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KkR-xY-ewO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bq1-cA-vZH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <tableViewController id="66g-Va-FGV" customClass="FightViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nXJ-el-57o">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -53,14 +53,56 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slq-ac-O5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="109"/>
+            <point key="canvasLocation" x="1375" y="109"/>
+        </scene>
+        <!--Table View Controller - Root View Controller-->
+        <scene sceneID="ozE-Fj-N2r">
+            <objects>
+                <tableViewController id="Rk1-6D-5La" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8sR-Rl-rUP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DDt-KW-pxj">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="nia-dM-Iwb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dp7-cN-fXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1401" y="870"/>
+        </scene>
+        <!--Navigation Controller - Profile-->
+        <scene sceneID="JU1-QX-2yK">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ept-qK-Z0b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="Cjz-BS-9Nj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nN-57-U7b">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rk1-6D-5La" kind="relationship" relationship="rootViewController" id="U9c-Be-7TV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVW-pm-tnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="870"/>
         </scene>
         <!--Fight Description View Controller - Detail-->
         <scene sceneID="hcx-1Y-ly9">
             <objects>
                 <viewController id="b5t-It-1b8" customClass="FightDescriptionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1r-j9-Xwn">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNj-Ya-NU9">
@@ -143,14 +185,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ode-Vg-H51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="-276"/>
+            <point key="canvasLocation" x="1952" y="-276"/>
         </scene>
         <!--Fight Detail View Controller - Ajouter-->
         <scene sceneID="P0Z-vB-vqe">
             <objects>
                 <viewController id="Ylf-JU-4uF" customClass="FightDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mS1-Ly-6Bf">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urd-XQ-lAz">
@@ -169,7 +211,7 @@
                                     <!--2013-06-18 13:12:31 +0000-->
                                 </date>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -187,7 +229,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de participants" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-2C-JdW">
@@ -199,15 +241,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <constraints>
                             <constraint firstItem="drF-I3-WDi" firstAttribute="bottom" secondItem="mS1-Ly-6Bf" secondAttribute="bottom" type="default" id="369-GM-Y29"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="urd-XQ-lAz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="97l-Y7-FjM"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" type="default" id="Htn-ZZ-bqv"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="mS1-Ly-6Bf" secondAttribute="centerX" type="default" id="9ZT-hA-dYe"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="Ae5-oK-W1g" secondAttribute="centerX" type="default" id="PCa-ll-xsg"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="mS1-Ly-6Bf" secondAttribute="top" constant="20" symbolic="YES" type="default" id="RcP-qx-5PR"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="T3j-pl-N0J"/>
-                            <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bTS-AI-5Yq"/>
-                            <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cKO-3d-OAS"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="Ae5-oK-W1g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gsN-Cf-Ew9"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="trailing" secondItem="mS1-Ly-6Bf" secondAttribute="trailing" type="default" id="mWe-ql-Qcf"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="1gV-2C-JdW" secondAttribute="centerX" type="default" id="lfH-b1-Ytw"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="urd-XQ-lAz" secondAttribute="centerX" type="default" id="mA5-an-APw"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pHc-n8-7IN"/>
-                            <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="s9z-iy-0JX"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPM-QC-Bv0"/>
                         </constraints>
                     </view>
@@ -231,12 +272,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afS-8N-W75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="482"/>
+            <point key="canvasLocation" x="2390" y="482"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Fights-->
         <scene sceneID="Ehj-PF-VQU">
             <objects>
                 <navigationController id="KkR-xY-ewO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fights" image="Default@2x.png" id="ij9-Cc-Bab" userLabel="dsf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nq-oF-OY1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -249,35 +291,31 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-Ao-fVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="912" y="109"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="78v-FV-KDN">
+            <objects>
+                <tabBarController id="bq1-cA-vZH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="0jI-87-LnU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KkR-xY-ewO" kind="relationship" relationship="viewControllers" id="Bjd-f5-ICO"/>
+                        <segue destination="ept-qK-Z0b" kind="relationship" relationship="viewControllers" id="QQi-DJ-5jG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5EW-mV-INZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="386" y="109"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="FightDescriptionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDescriptionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="labelAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelFightersNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FightDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel:"/>
-                <relationship kind="action" name="save:"/>
-                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="fighternumberTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="FightViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
+    <resources>
+        <image name="Default@2x.png" width="640" height="960"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

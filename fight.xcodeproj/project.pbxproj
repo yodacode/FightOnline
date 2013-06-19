@@ -22,6 +22,10 @@
 		589748431770954D00FE6C21 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589748421770954D00FE6C21 /* FightViewController.m */; };
 		58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58974845177095D800FE6C21 /* FightDetailViewController.m */; };
 		5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */; };
+		589748601771F60300FE6C21 /* icon_profile_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5897485C1771F60300FE6C21 /* icon_profile_active.png */; };
+		589748611771F60300FE6C21 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5897485D1771F60300FE6C21 /* icon_profile.png */; };
+		589748631771F60300FE6C21 /* icon_gun_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5897485F1771F60300FE6C21 /* icon_gun_active.png */; };
+		589748651771F63E00FE6C21 /* icon_gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 589748641771F63E00FE6C21 /* icon_gun.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		58974845177095D800FE6C21 /* FightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDetailViewController.m; sourceTree = "<group>"; };
 		5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescriptionViewController.h; sourceTree = "<group>"; };
 		5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescriptionViewController.m; sourceTree = "<group>"; };
+		5897485C1771F60300FE6C21 /* icon_profile_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile_active.png; path = ../../icon_profile_active.png; sourceTree = "<group>"; };
+		5897485D1771F60300FE6C21 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile.png; path = ../../icon_profile.png; sourceTree = "<group>"; };
+		5897485F1771F60300FE6C21 /* icon_gun_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun_active.png; path = ../../icon_gun_active.png; sourceTree = "<group>"; };
+		589748641771F63E00FE6C21 /* icon_gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun.png; path = ../../icon_gun.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,10 @@
 		58974825177090B800FE6C21 /* fight */ = {
 			isa = PBXGroup;
 			children = (
+				589748641771F63E00FE6C21 /* icon_gun.png */,
+				5897485C1771F60300FE6C21 /* icon_profile_active.png */,
+				5897485D1771F60300FE6C21 /* icon_profile.png */,
+				5897485F1771F60300FE6C21 /* icon_gun_active.png */,
 				5897482E177090B800FE6C21 /* AppDelegate.h */,
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
@@ -180,6 +192,10 @@
 				58974834177090B800FE6C21 /* Default@2x.png in Resources */,
 				58974836177090B800FE6C21 /* Default-568h@2x.png in Resources */,
 				58974840177091D400FE6C21 /* Storyboard.storyboard in Resources */,
+				589748601771F60300FE6C21 /* icon_profile_active.png in Resources */,
+				589748611771F60300FE6C21 /* icon_profile.png in Resources */,
+				589748631771F60300FE6C21 /* icon_gun_active.png in Resources */,
+				589748651771F63E00FE6C21 /* icon_gun.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +328,7 @@
 				5897483E177090B800FE6C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
