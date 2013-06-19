@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slq-ac-O5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="109"/>
+            <point key="canvasLocation" x="1389" y="-295"/>
         </scene>
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="ozE-Fj-N2r">
@@ -79,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dp7-cN-fXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="870"/>
+            <point key="canvasLocation" x="1401" y="878"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="JU1-QX-2yK">
@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVW-pm-tnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="870"/>
+            <point key="canvasLocation" x="919" y="878"/>
         </scene>
         <!--Fight Description View Controller - Detail-->
         <scene sceneID="hcx-1Y-ly9">
@@ -135,6 +135,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dates :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxh-Df-OZr">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="Z1r-yY-zBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2D-sw-FaJ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -150,9 +158,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-qA-5bO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Vxh-Df-OZr" firstAttribute="top" secondItem="CTq-fQ-IwB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="08F-e0-nl5"/>
                             <constraint firstItem="o2D-sw-FaJ" firstAttribute="baseline" secondItem="ziA-8K-pkY" secondAttribute="baseline" type="default" id="0ju-Pv-JQ9"/>
                             <constraint firstItem="o2D-sw-FaJ" firstAttribute="leading" secondItem="mNj-Ya-NU9" secondAttribute="leading" type="default" id="52K-TH-CAc"/>
                             <constraint firstItem="HZu-qk-pnx" firstAttribute="leading" secondItem="o2D-sw-FaJ" secondAttribute="leading" type="default" id="52i-VB-OCa"/>
@@ -163,10 +177,13 @@
                             <constraint firstItem="HZu-qk-pnx" firstAttribute="baseline" secondItem="CTq-fQ-IwB" secondAttribute="baseline" type="default" id="QwF-7K-orn"/>
                             <constraint firstAttribute="trailing" secondItem="mNj-Ya-NU9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eij-Md-bsi"/>
                             <constraint firstItem="ziA-8K-pkY" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hrK-G2-XIH"/>
+                            <constraint firstItem="Vxh-Df-OZr" firstAttribute="centerX" secondItem="ziA-8K-pkY" secondAttribute="centerX" type="default" id="jb0-Yz-bgu"/>
                             <constraint firstItem="l93-hi-wGK" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kHj-KU-0Ol"/>
                             <constraint firstItem="mNj-Ya-NU9" firstAttribute="top" secondItem="m1r-j9-Xwn" secondAttribute="top" constant="25" id="lNn-7P-nbq"/>
                             <constraint firstItem="xhR-lX-NGR" firstAttribute="leading" secondItem="m1r-j9-Xwn" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nbo-HZ-EN6"/>
                             <constraint firstItem="ziA-8K-pkY" firstAttribute="top" secondItem="l93-hi-wGK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qta-rj-kue"/>
+                            <constraint firstItem="DZc-qA-5bO" firstAttribute="baseline" secondItem="Vxh-Df-OZr" secondAttribute="baseline" type="default" id="u1F-Zy-Mqc"/>
+                            <constraint firstItem="DZc-qA-5bO" firstAttribute="leading" secondItem="HZu-qk-pnx" secondAttribute="leading" type="default" id="ugN-9J-2aK"/>
                             <constraint firstItem="CTq-fQ-IwB" firstAttribute="trailing" secondItem="l93-hi-wGK" secondAttribute="trailing" type="default" id="uz4-RI-Gf0"/>
                         </constraints>
                     </view>
@@ -179,13 +196,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="labelAddress" destination="o2D-sw-FaJ" id="cED-fF-aJe"/>
+                        <outlet property="labelDateFight" destination="DZc-qA-5bO" id="u1y-sM-kYl"/>
                         <outlet property="labelFightersNumber" destination="HZu-qk-pnx" id="CsI-tr-J5u"/>
                         <outlet property="labelName" destination="mNj-Ya-NU9" id="1hO-uq-fUk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ode-Vg-H51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="-276"/>
+            <point key="canvasLocation" x="1980" y="-701"/>
         </scene>
         <!--Fight Detail View Controller - Ajouter-->
         <scene sceneID="P0Z-vB-vqe">
@@ -203,13 +221,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-I3-WDi">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-I3-WDi">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="kAc-LJ-YZg"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="393253951.956644">
                                     <!--2013-06-18 13:12:31 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="fr"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
                                     <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
@@ -239,15 +258,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="bottom" secondItem="mS1-Ly-6Bf" secondAttribute="bottom" type="default" id="369-GM-Y29"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="urd-XQ-lAz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="97l-Y7-FjM"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="mS1-Ly-6Bf" secondAttribute="centerX" type="default" id="9ZT-hA-dYe"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="Ae5-oK-W1g" secondAttribute="centerX" type="default" id="PCa-ll-xsg"/>
+                            <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ai8-nI-hPr"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="bottom" secondItem="mS1-Ly-6Bf" secondAttribute="bottom" type="default" id="CMQ-f9-Cnl"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="mS1-Ly-6Bf" secondAttribute="top" constant="20" symbolic="YES" type="default" id="RcP-qx-5PR"/>
+                            <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rqh-Wh-Ueq"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="T3j-pl-N0J"/>
+                            <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="W8l-RT-fxu"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="Ae5-oK-W1g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gsN-Cf-Ew9"/>
                             <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="1gV-2C-JdW" secondAttribute="centerX" type="default" id="lfH-b1-Ytw"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="urd-XQ-lAz" secondAttribute="centerX" type="default" id="mA5-an-APw"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pHc-n8-7IN"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zPM-QC-Bv0"/>
                         </constraints>
@@ -266,13 +285,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="Ae5-oK-W1g" id="xAk-6q-QNE"/>
+                        <outlet property="dateFight" destination="drF-I3-WDi" id="0Jy-q3-3Qs"/>
                         <outlet property="fighternumberTextField" destination="1gV-2C-JdW" id="aeK-NN-xQE"/>
                         <outlet property="nameTextField" destination="urd-XQ-lAz" id="rRk-6D-bjG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afS-8N-W75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2390" y="482"/>
+            <point key="canvasLocation" x="1980" y="154"/>
         </scene>
         <!--Navigation Controller - Fights-->
         <scene sceneID="Ehj-PF-VQU">
@@ -291,7 +311,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-Ao-fVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="109"/>
+            <point key="canvasLocation" x="914" y="-295"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="78v-FV-KDN">
@@ -316,6 +336,34 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="Default@2x.png" width="640" height="960"/>
     </resources>
+    <classes>
+        <class className="FightDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelDateFight" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelFightersNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FightDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateFight" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="fighternumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FightViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelAddress;
 @property (weak, nonatomic) IBOutlet UILabel *labelFightersNumber;
+@property (weak, nonatomic) IBOutlet UILabel *labelDateFight;
 
 @end

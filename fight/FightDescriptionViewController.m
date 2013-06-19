@@ -30,9 +30,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     if (self.fight) {
+        
         self.labelName.text = [self.fight valueForKey:@"name"];
         self.labelAddress.text = [self.fight valueForKey:@"address"];
-        //self.labelFightersNumber.text = [self.fight valueForKey:@"fightersnumber"];
+        
+        NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
+        self.labelFightersNumber.text = fightersnumber;
+        
+        NSDate *fightdate = [self.fight valueForKey:@"datefight"];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd/MM/yyyy"];
+        NSString *stringFromDate = [formatter stringFromDate:fightdate];
+        self.labelDateFight.text =stringFromDate;
+        
     }
 }
 
