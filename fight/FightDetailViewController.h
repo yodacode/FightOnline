@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FightDetailViewController : UIViewController
+@interface FightDetailViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextField *fighternumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dateFight;
 
 @property (strong) NSManagedObject *fight;

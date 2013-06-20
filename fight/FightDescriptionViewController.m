@@ -37,6 +37,15 @@
         NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
         self.labelFightersNumber.text = fightersnumber;
         
+//        NSString *longitude = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"longitude"]];
+  //      self.labelLongitude.text = longitude;
+        
+        NSString *longitude = [NSString stringWithFormat:@"%f", [[self.fight valueForKey:@"longitude"] doubleValue]];
+        self.labelLongitude.text = longitude;
+        
+        NSString *latitude = [NSString stringWithFormat:@"%f", [[self.fight valueForKey:@"latitude"] doubleValue]];
+        self.labelLatitude.text = latitude;
+        
         NSDate *fightdate = [self.fight valueForKey:@"datefight"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"dd/MM/yyyy"];

@@ -72,8 +72,6 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     // Get the current date
-    //NSDate *dateFight = [self.dateFight date];
-
     
     if (self.fight) {
 
@@ -81,6 +79,8 @@
         [self.fight setValue:self.nameTextField.text forKey:@"name"];
         [self.fight setValue:self.addressTextField.text forKey:@"address"];
         [self.fight setValue:[NSNumber numberWithInteger:[self.fighternumberTextField.text integerValue]] forKey:@"fightersnumber"];
+        [self.fight setValue:[NSNumber numberWithDouble:[self.longitudeTextField.text doubleValue]] forKey:@"longitude"];
+        [self.fight setValue:[NSNumber numberWithDouble:[self.latitudeTextField.text doubleValue]] forKey:@"latitude"];
         NSDate * dateForFight = self.dateFight.date;
         [self.fight setValue:dateForFight forKey:@"datefight"];
         
@@ -91,14 +91,18 @@
         [newFight setValue:self.addressTextField.text forKey:@"address"];
         [newFight setValue:[NSNumber numberWithInteger:[self.fighternumberTextField.text integerValue]] forKey:@"fightersnumber"];
         
+//        double myLongitude = 52.764397;
+
+        [newFight setValue:[NSNumber numberWithDouble:[self.longitudeTextField.text doubleValue]] forKey:@"longitude"];
+        [newFight setValue:[NSNumber numberWithDouble:[self.latitudeTextField.text doubleValue]] forKey:@"latitude"];
+        
         NSDate * dateForFight = self.dateFight.date;
         [newFight setValue:dateForFight forKey:@"datefight"];
         
         
 
     }
-    
-    
+
     
     NSError *error = nil;
     //Sauvegarde du nouvel objet persistant
@@ -112,4 +116,13 @@
 - (IBAction)cancel:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
 @end

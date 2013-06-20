@@ -4,9 +4,11 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="datefight" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="fightersnumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Fight" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Fight" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>
