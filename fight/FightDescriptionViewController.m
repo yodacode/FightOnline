@@ -8,6 +8,7 @@
 
 #import "FightDescriptionViewController.h"
 #import "FightDetailViewController.h"
+#import "FightLocationViewController.h"
 
 @interface FightDescriptionViewController ()
 @end
@@ -69,6 +70,11 @@
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;
         FightDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.fight  = selectedFight;
+    }
+    if([[segue identifier] isEqualToString:@"GetMap"]) {
+        NSManagedObject *selectedFight = self.fight;
+        FightLocationViewController *destViewController = segue.destinationViewController;
         destViewController.fight  = selectedFight;
     }
 }

@@ -12,6 +12,8 @@
 
 @end
 
+
+
 @implementation FightDetailViewController
 @synthesize fight;
 
@@ -100,7 +102,6 @@
         [newFight setValue:dateForFight forKey:@"datefight"];
         
         
-
     }
 
     

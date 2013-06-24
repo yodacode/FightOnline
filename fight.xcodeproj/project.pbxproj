@@ -26,6 +26,9 @@
 		589748611771F60300FE6C21 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5897485D1771F60300FE6C21 /* icon_profile.png */; };
 		589748631771F60300FE6C21 /* icon_gun_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 5897485F1771F60300FE6C21 /* icon_gun_active.png */; };
 		589748651771F63E00FE6C21 /* icon_gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 589748641771F63E00FE6C21 /* icon_gun.png */; };
+		58E9CA6817783CAB00CDC9F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E9CA6717783CAB00CDC9F8 /* MapKit.framework */; };
+		58E9CA6C17783D8600CDC9F8 /* FightLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E9CA6B17783D8600CDC9F8 /* FightLocationViewController.m */; };
+		58E9CA6F1778745400CDC9F8 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E9CA6E1778745400CDC9F8 /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,10 +54,15 @@
 		58974845177095D800FE6C21 /* FightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDetailViewController.m; sourceTree = "<group>"; };
 		5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescriptionViewController.h; sourceTree = "<group>"; };
 		5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescriptionViewController.m; sourceTree = "<group>"; };
-		5897485C1771F60300FE6C21 /* icon_profile_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile_active.png; path = ../../icon_profile_active.png; sourceTree = "<group>"; };
-		5897485D1771F60300FE6C21 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile.png; path = ../../icon_profile.png; sourceTree = "<group>"; };
-		5897485F1771F60300FE6C21 /* icon_gun_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun_active.png; path = ../../icon_gun_active.png; sourceTree = "<group>"; };
-		589748641771F63E00FE6C21 /* icon_gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun.png; path = ../../icon_gun.png; sourceTree = "<group>"; };
+		5897485C1771F60300FE6C21 /* icon_profile_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile_active.png; path = ../icon_profile_active.png; sourceTree = "<group>"; };
+		5897485D1771F60300FE6C21 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile.png; path = ../icon_profile.png; sourceTree = "<group>"; };
+		5897485F1771F60300FE6C21 /* icon_gun_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun_active.png; path = ../icon_gun_active.png; sourceTree = "<group>"; };
+		589748641771F63E00FE6C21 /* icon_gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun.png; path = ../icon_gun.png; sourceTree = "<group>"; };
+		58E9CA6717783CAB00CDC9F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		58E9CA6A17783D8600CDC9F8 /* FightLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightLocationViewController.h; sourceTree = "<group>"; };
+		58E9CA6B17783D8600CDC9F8 /* FightLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightLocationViewController.m; sourceTree = "<group>"; };
+		58E9CA6D1778745400CDC9F8 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		58E9CA6E1778745400CDC9F8 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E9CA6817783CAB00CDC9F8 /* MapKit.framework in Frameworks */,
 				5897481E177090B800FE6C21 /* UIKit.framework in Frameworks */,
 				58974820177090B800FE6C21 /* Foundation.framework in Frameworks */,
 				58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +84,8 @@
 		58974811177090B800FE6C21 = {
 			isa = PBXGroup;
 			children = (
+				58E9CA6717783CAB00CDC9F8 /* MapKit.framework */,
+				58E9CA6917783CDB00CDC9F8 /* img */,
 				58974825177090B800FE6C21 /* fight */,
 				5897481C177090B800FE6C21 /* Frameworks */,
 				5897481B177090B800FE6C21 /* Products */,
@@ -103,17 +114,17 @@
 		58974825177090B800FE6C21 /* fight */ = {
 			isa = PBXGroup;
 			children = (
-				589748641771F63E00FE6C21 /* icon_gun.png */,
-				5897485C1771F60300FE6C21 /* icon_profile_active.png */,
-				5897485D1771F60300FE6C21 /* icon_profile.png */,
-				5897485F1771F60300FE6C21 /* icon_gun_active.png */,
 				5897482E177090B800FE6C21 /* AppDelegate.h */,
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
 				5897483F177091D400FE6C21 /* Storyboard.storyboard */,
 				5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */,
 				5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */,
+				58E9CA6D1778745400CDC9F8 /* Location.h */,
+				58E9CA6E1778745400CDC9F8 /* Location.m */,
 				58974844177095D800FE6C21 /* FightDetailViewController.h */,
+				58E9CA6A17783D8600CDC9F8 /* FightLocationViewController.h */,
+				58E9CA6B17783D8600CDC9F8 /* FightLocationViewController.m */,
 				58974845177095D800FE6C21 /* FightDetailViewController.m */,
 				589748411770954D00FE6C21 /* FightViewController.h */,
 				589748421770954D00FE6C21 /* FightViewController.m */,
@@ -134,6 +145,17 @@
 				58974835177090B800FE6C21 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58E9CA6917783CDB00CDC9F8 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				589748641771F63E00FE6C21 /* icon_gun.png */,
+				5897485C1771F60300FE6C21 /* icon_profile_active.png */,
+				5897485D1771F60300FE6C21 /* icon_profile.png */,
+				5897485F1771F60300FE6C21 /* icon_gun_active.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +234,8 @@
 				589748431770954D00FE6C21 /* FightViewController.m in Sources */,
 				58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */,
 				5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */,
+				58E9CA6C17783D8600CDC9F8 /* FightLocationViewController.m in Sources */,
+				58E9CA6F1778745400CDC9F8 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,7 +34,7 @@
 {
     [super viewDidAppear:animated];
     
-    // Fetch the devices from persistent data store
+    // Fetch the fights from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Fight"];
     self.fights = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
@@ -110,8 +110,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
+{    
     if ([[segue identifier] isEqualToString:@"GetFight"]) {
         NSManagedObject *selectedFight = [self.fights objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
         FightDescriptionViewController *destViewController = segue.destinationViewController;
