@@ -24,6 +24,7 @@
     if (self) {
         // Custom initialization
     }
+
     return self;
 }
 
@@ -31,6 +32,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    //pour le retout clavier
+    [[self loginUserTextField]setDelegate:self];
+    [[self loginPasswordTextField]setDelegate:self];
     
     AppDelegate * appDelegate = [[UIApplication sharedApplication]delegate];
     context = [appDelegate managedObjectContext];
@@ -43,7 +49,23 @@
 }
 
 - (IBAction)logInButton:(id)sender {
-   
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    [request setEntity:entityDesc];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userName like %@ and userPassword like %@", self.loginUserTextField.text, self.loginPasswordTextField.text];
+    [request setPredicate:predicate];
+    
+    NSError *error;
+    NSArray *matchingData = [context executeFetchRequest:request error:&error];
+    
+    if(matchingData.count <=0){
+        self.loginLabel.text = @"il faut creer un compte connard";
+    }else{
+        self.loginLabel.text = @"Braovo mousaillon ! ";
+        [self performSegueWithIdentifier:@"figths" sender:self];
+    }
+
 }
 
 - (IBAction)signUpButton:(id)sender {
@@ -51,10 +73,15 @@
     NSManagedObject *newUser = [[NSManagedObject alloc]initWithEntity:entityDesc insertIntoManagedObjectContext:context];
     
     [newUser setValue:self.loginUserTextField.text forKey:@"userName"];
-    [newUser setValue:self.loginUserTextField.text forKey:@"passWord"];
+    [newUser setValue:self.loginPasswordTextField.text forKey:@"userPassword"];
     
     NSError *error;
     [context save:&error];
     self.loginLabel.text = @"Utilisateur ajouté !";
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return [textField resignFirstResponder];
+}
 @end
+

@@ -24,6 +24,7 @@
 		5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */; };
 		5FBB527317782D960060FC27 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527217782D960060FC27 /* Login.m */; };
 		5FBB527817782EA80060FC27 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527617782EA80060FC27 /* loginViewController.m */; };
+		5FC94D0B1778EE20006BFC62 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC94D0A1778EE20006BFC62 /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		5FBB527217782D960060FC27 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		5FBB527517782EA80060FC27 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		5FBB527617782EA80060FC27 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		5FC94D091778EE20006BFC62 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		5FC94D0A1778EE20006BFC62 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 			children = (
 				5FBB527617782EA80060FC27 /* loginViewController.m */,
 				5FBB527517782EA80060FC27 /* loginViewController.h */,
+				5FC94D091778EE20006BFC62 /* RegisterViewController.h */,
+				5FC94D0A1778EE20006BFC62 /* RegisterViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */,
 				5FBB527317782D960060FC27 /* Login.m in Sources */,
 				5FBB527817782EA80060FC27 /* loginViewController.m in Sources */,
+				5FC94D0B1778EE20006BFC62 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
