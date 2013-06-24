@@ -71,13 +71,30 @@
 - (IBAction)signUpButton:(id)sender {
     NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     NSManagedObject *newUser = [[NSManagedObject alloc]initWithEntity:entityDesc insertIntoManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
     
-    [newUser setValue:self.loginUserTextField.text forKey:@"userName"];
-    [newUser setValue:self.loginPasswordTextField.text forKey:@"userPassword"];
+    //Pour verifier si l'utilisateur existe deja
+    [request setEntity:entityDesc];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userName like %@ ", self.loginUserTextField.text];
+    [request setPredicate:predicate];
     
     NSError *error;
-    [context save:&error];
-    self.loginLabel.text = @"Utilisateur ajouté !";
+    NSArray *matchingData = [context executeFetchRequest:request error:&error];
+    
+    //on ajoute un utilisateur si la requete n'aboutit à rien
+    if(matchingData.count <=0){
+        [newUser setValue:self.loginUserTextField.text forKey:@"userName"];
+        [newUser setValue:self.loginPasswordTextField.text forKey:@"userPassword"];
+        [context save:&error];
+        self.loginLabel.text = @"Utilisateur ajouté !";
+    }else{
+        self.loginLabel.text = @"cet utilisateur exite deja";
+    }
+    
+}
+
+- (IBAction)goToRegister:(id)sender {
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
