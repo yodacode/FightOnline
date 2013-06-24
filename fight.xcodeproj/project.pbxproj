@@ -22,6 +22,8 @@
 		589748431770954D00FE6C21 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589748421770954D00FE6C21 /* FightViewController.m */; };
 		58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58974845177095D800FE6C21 /* FightDetailViewController.m */; };
 		5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */; };
+		5FBB527317782D960060FC27 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527217782D960060FC27 /* Login.m */; };
+		5FBB527817782EA80060FC27 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527617782EA80060FC27 /* loginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +42,17 @@
 		58974833177090B800FE6C21 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		58974835177090B800FE6C21 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		58974838177090B800FE6C21 /* fight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fight.xcdatamodel; sourceTree = "<group>"; };
-		5897483F177091D400FE6C21 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		5897483F177091D400FE6C21 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = fight/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		589748411770954D00FE6C21 /* FightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightViewController.h; sourceTree = "<group>"; };
 		589748421770954D00FE6C21 /* FightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightViewController.m; sourceTree = "<group>"; };
 		58974844177095D800FE6C21 /* FightDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDetailViewController.h; sourceTree = "<group>"; };
 		58974845177095D800FE6C21 /* FightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDetailViewController.m; sourceTree = "<group>"; };
 		5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescriptionViewController.h; sourceTree = "<group>"; };
 		5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescriptionViewController.m; sourceTree = "<group>"; };
+		5FBB527117782D960060FC27 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		5FBB527217782D960060FC27 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		5FBB527517782EA80060FC27 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		5FBB527617782EA80060FC27 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		58974825177090B800FE6C21 /* fight */ = {
 			isa = PBXGroup;
 			children = (
+				5FBB527A177837C60060FC27 /* Views */,
+				5FBB527417782D9E0060FC27 /* Models */,
 				5897482E177090B800FE6C21 /* AppDelegate.h */,
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
@@ -122,6 +130,24 @@
 				58974835177090B800FE6C21 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FBB527417782D9E0060FC27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB527117782D960060FC27 /* Login.h */,
+				5FBB527217782D960060FC27 /* Login.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5FBB527A177837C60060FC27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB527617782EA80060FC27 /* loginViewController.m */,
+				5FBB527517782EA80060FC27 /* loginViewController.h */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +222,8 @@
 				589748431770954D00FE6C21 /* FightViewController.m in Sources */,
 				58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */,
 				5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */,
+				5FBB527317782D960060FC27 /* Login.m in Sources */,
+				5FBB527817782EA80060FC27 /* loginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +305,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -288,6 +317,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,6 +342,7 @@
 				5897483E177090B800FE6C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
