@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface FightLocationViewController : UIViewController<MKMapViewDelegate>
+@interface FightLocationViewController : UIViewController<MKMapViewDelegate>{
+    CLGeocoder *_geocoder;
+}
+@property (nonatomic, strong) CLGeocoder *geocoder;
 @property (strong) NSManagedObject *fight;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 

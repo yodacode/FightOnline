@@ -17,6 +17,7 @@
 @implementation FightLocationViewController
 @synthesize mapView;
 @synthesize fight;
+@synthesize geocoder = _geocoder;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,27 +34,67 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.mapView.delegate = self;
-
+    
     
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     
+    if (!self.geocoder) {
+        self.geocoder = [[CLGeocoder alloc] init];
+    }
+    
+    
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1000, 1000);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+    
+     NSString *address = [self.fight valueForKey:@"address"];
+    
+        NSLog(@"TOTO");
+    
+    
+    
+    
+    [self.geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
 
+        if ([placemarks count] > 0) {
+            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+            CLLocation *location = placemark.location;
+            CLLocationCoordinate2D coordinate = location.coordinate;
+            
+            // Add an annotation
+            CLLocationCoordinate2D coordinates;
+            
+            if([[self.fight valueForKey:@"latitude"] doubleValue] != 0 && [[self.fight valueForKey:@"longitude"] doubleValue] != 0) {
+                coordinates.latitude = [[self.fight valueForKey:@"latitude"] doubleValue];
+                coordinates.longitude = [[self.fight valueForKey:@"longitude"] doubleValue];
+            } else {
+                coordinates.longitude = coordinate.longitude;
+                coordinates.latitude = coordinate.latitude;
+            }
+            
+            MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+            point.coordinate = coordinates;
+            point.title = [self.fight valueForKey:@"name"];
+            point.subtitle = [self.fight valueForKey:@"address"];
+            [self.mapView addAnnotation:point];
+            
+            
+        } else {
+            NSLog(@"place not found");
+        }
     
-    // Add an annotation
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = [[self.fight valueForKey:@"latitude"] doubleValue];
-    coordinate.longitude = [[self.fight valueForKey:@"longitude"] doubleValue];
     
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = coordinate;
-    point.title = [self.fight valueForKey:@"name"];
-    point.subtitle = [self.fight valueForKey:@"address"];
-    [self.mapView addAnnotation:point];
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

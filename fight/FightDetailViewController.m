@@ -92,8 +92,6 @@
         [newFight setValue:self.nameTextField.text forKey:@"name"];
         [newFight setValue:self.addressTextField.text forKey:@"address"];
         [newFight setValue:[NSNumber numberWithInteger:[self.fighternumberTextField.text integerValue]] forKey:@"fightersnumber"];
-        
-//        double myLongitude = 52.764397;
 
         [newFight setValue:[NSNumber numberWithDouble:[self.longitudeTextField.text doubleValue]] forKey:@"longitude"];
         [newFight setValue:[NSNumber numberWithDouble:[self.latitudeTextField.text doubleValue]] forKey:@"latitude"];

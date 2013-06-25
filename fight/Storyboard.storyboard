@@ -291,34 +291,31 @@
         <scene sceneID="P0Z-vB-vqe">
             <objects>
                 <viewController id="Ylf-JU-4uF" customClass="FightDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mS1-Ly-6Bf">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UuC-Pf-tIq">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuC-Pf-tIq">
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de participants" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-2C-JdW">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adresse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-oK-W1g">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urd-XQ-lAz">
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-I3-WDi">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="216" id="kAc-LJ-YZg"/>
-                                        </constraints>
-                                        <date key="date" timeIntervalSinceReferenceDate="393253951.956644">
-                                            <!--2013-06-18 13:12:31 +0000-->
-                                        </date>
-                                        <locale key="locale" localeIdentifier="fr"/>
-                                        <timeZone key="timeZone" name="America/Los_Angeles">
-                                            <data key="data">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de participants" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-2C-JdW">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rue ville pays" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-oK-W1g">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urd-XQ-lAz">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-I3-WDi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="kAc-LJ-YZg"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="393253951.956644">
+                                    <!--2013-06-18 13:12:31 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="fr"/>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -337,52 +334,43 @@ AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
-                                        </timeZone>
-                                    </datePicker>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-Kf-0FO">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="127" id="C5o-rn-zpC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pow-If-Mxf">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="137" id="kPU-z4-oXv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
+                                </timeZone>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-Kf-0FO">
                                 <constraints>
-                                    <constraint firstItem="drF-I3-WDi" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="322" id="190-Pk-jf4"/>
-                                    <constraint firstItem="1gV-2C-JdW" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3xW-R4-7Qb"/>
-                                    <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cgw-OK-5at"/>
-                                    <constraint firstItem="Pow-If-Mxf" firstAttribute="baseline" secondItem="cJJ-Kf-0FO" secondAttribute="baseline" type="default" id="EwE-Hy-6JU"/>
-                                    <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="60" id="GHb-BS-iWm"/>
-                                    <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IWp-Au-XpM"/>
-                                    <constraint firstItem="cJJ-Kf-0FO" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="148" id="Nzg-wP-lkK"/>
-                                    <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="16" id="SRq-QV-i8a"/>
-                                    <constraint firstAttribute="bottom" secondItem="drF-I3-WDi" secondAttribute="bottom" constant="-83" id="VMv-0o-DPH"/>
-                                    <constraint firstItem="Ae5-oK-W1g" firstAttribute="centerX" secondItem="UuC-Pf-tIq" secondAttribute="centerX" type="default" id="Vhu-dE-t7L"/>
-                                    <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="103" id="afy-L9-Z0x"/>
-                                    <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bGF-fo-9lL"/>
-                                    <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="1gV-2C-JdW" secondAttribute="centerX" type="default" id="gsR-Cw-Xyg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hFi-Ey-DOK"/>
-                                    <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hLU-zP-Sei"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pow-If-Mxf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lLv-en-3K9"/>
-                                    <constraint firstItem="cJJ-Kf-0FO" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ldZ-7k-EBt"/>
+                                    <constraint firstAttribute="width" constant="127" id="C5o-rn-zpC"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Latitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pow-If-Mxf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="kPU-z4-oXv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UuC-Pf-tIq" firstAttribute="top" secondItem="mS1-Ly-6Bf" secondAttribute="top" type="default" id="DLu-hX-02q"/>
-                            <constraint firstItem="UuC-Pf-tIq" firstAttribute="leading" secondItem="mS1-Ly-6Bf" secondAttribute="leading" type="default" id="OEZ-ly-Y8A"/>
-                            <constraint firstItem="UuC-Pf-tIq" firstAttribute="trailing" secondItem="mS1-Ly-6Bf" secondAttribute="trailing" type="default" id="WLr-kk-ijl"/>
-                            <constraint firstItem="UuC-Pf-tIq" firstAttribute="bottom" secondItem="mS1-Ly-6Bf" secondAttribute="bottom" type="default" id="hih-qN-Agu"/>
+                            <constraint firstItem="1gV-2C-JdW" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3xW-R4-7Qb"/>
+                            <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cgw-OK-5at"/>
+                            <constraint firstItem="Pow-If-Mxf" firstAttribute="baseline" secondItem="cJJ-Kf-0FO" secondAttribute="baseline" type="default" id="EwE-Hy-6JU"/>
+                            <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="60" id="GHb-BS-iWm"/>
+                            <constraint firstItem="Ae5-oK-W1g" firstAttribute="centerX" secondItem="UuC-Pf-tIq" secondAttribute="centerX" type="default" id="GuZ-20-BQa"/>
+                            <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IWp-Au-XpM"/>
+                            <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="16" id="SRq-QV-i8a"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="267" id="Wca-gm-W65"/>
+                            <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="103" id="afy-L9-Z0x"/>
+                            <constraint firstItem="1gV-2C-JdW" firstAttribute="centerX" secondItem="drF-I3-WDi" secondAttribute="centerX" type="default" id="bEo-yg-Rth"/>
+                            <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bGF-fo-9lL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hFi-Ey-DOK"/>
+                            <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hLU-zP-Sei"/>
+                            <constraint firstAttribute="trailing" secondItem="Pow-If-Mxf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lLv-en-3K9"/>
+                            <constraint firstItem="cJJ-Kf-0FO" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ldZ-7k-EBt"/>
+                            <constraint firstAttribute="bottom" secondItem="drF-I3-WDi" secondAttribute="bottom" constant="-28" id="qEA-Nk-9RB"/>
+                            <constraint firstItem="cJJ-Kf-0FO" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="151" id="yTr-Q8-Trc"/>
                         </constraints>
-                    </view>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Ajouter" id="5HD-Dt-MvP">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="O4F-1w-K6U">
                             <connections>
