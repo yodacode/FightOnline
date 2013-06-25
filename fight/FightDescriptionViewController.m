@@ -51,7 +51,7 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"dd/MM/yyyy"];
         NSString *stringFromDate = [formatter stringFromDate:fightdate];
-        self.labelDateFight.text =stringFromDate;
+        self.labelDateFight.text = stringFromDate;
         
     }
 }
@@ -66,6 +66,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+    
+  //  UIButton *buttonThatWasPressed = (UIButton *)sender;
+//    buttonThatWasPressed.enabled = NO;
     
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;

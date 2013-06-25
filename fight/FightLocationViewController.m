@@ -49,12 +49,7 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1000, 1000);
     [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
     
-     NSString *address = [self.fight valueForKey:@"address"];
-    
-        NSLog(@"TOTO");
-    
-    
-    
+     NSString *address = [self.fight valueForKey:@"address"];    
     
     [self.geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
 
@@ -80,6 +75,8 @@
             point.subtitle = [self.fight valueForKey:@"address"];
             [self.mapView addAnnotation:point];
             
+
+            
             
         } else {
             NSLog(@"place not found");
@@ -87,10 +84,6 @@
     
     
     }];
-    
-    
-    
-    
     
     
     
