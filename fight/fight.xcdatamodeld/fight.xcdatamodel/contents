@@ -7,11 +7,15 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="User" syncable="YES">
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPseudo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userSex" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
         <element name="Fight" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="User" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>
