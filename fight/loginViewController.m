@@ -60,9 +60,10 @@
     NSArray *matchingData = [context executeFetchRequest:request error:&error];
     
     if(matchingData.count <=0){
-        self.loginLabel.text = @"il faut creer un compte connard";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion" message:@"Il faut creer un compte" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+
     }else{
-        self.loginLabel.text = @"Braovo mousaillon ! ";
         [self performSegueWithIdentifier:@"figths" sender:self];
     }
 
@@ -86,9 +87,11 @@
         [newUser setValue:self.loginUserTextField.text forKey:@"userName"];
         [newUser setValue:self.loginPasswordTextField.text forKey:@"userPassword"];
         [context save:&error];
-        self.loginLabel.text = @"Utilisateur ajouté !";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Utilisateur ajouté" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }else{
-        self.loginLabel.text = @"cet utilisateur exite deja";
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Cet utilisateur existe deja" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     
 }

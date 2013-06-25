@@ -261,7 +261,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kf7-Qi-34F" kind="relationship" relationship="rootViewController" id="hQV-HV-hc4"/>
+                        <segue destination="kf7-Qi-34F" kind="relationship" relationship="rootViewController" id="ksE-Be-qOx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLH-ka-X4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,25 +321,25 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0Ga-i7-jf4" firstAttribute="leading" secondItem="EfW-fG-awN" secondAttribute="leading" type="default" id="00C-8y-evT"/>
-                                    <constraint firstItem="9Kj-ii-dYO" firstAttribute="centerX" secondItem="yw3-64-hKs" secondAttribute="centerX" type="default" id="4EO-nL-Svh"/>
                                     <constraint firstItem="r1t-6F-YN5" firstAttribute="trailing" secondItem="TeP-M2-dD8" secondAttribute="trailing" type="default" id="4iD-Rv-ivD"/>
+                                    <constraint firstItem="EfW-fG-awN" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="144" id="5Ho-KE-Y20"/>
                                     <constraint firstItem="r1t-6F-YN5" firstAttribute="leading" secondItem="BEu-BX-icD" secondAttribute="leading" type="default" id="5Pr-h0-XCg"/>
                                     <constraint firstItem="0Ga-i7-jf4" firstAttribute="trailing" secondItem="EfW-fG-awN" secondAttribute="trailing" type="default" id="5ks-AU-v7x"/>
-                                    <constraint firstItem="r1t-6F-YN5" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="260" id="DYg-JN-uEv"/>
-                                    <constraint firstItem="BEu-BX-icD" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="212" id="ETX-82-ra0"/>
-                                    <constraint firstItem="Aig-cr-8fL" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="357" id="ISA-tX-1jz"/>
-                                    <constraint firstAttribute="bottom" secondItem="Aig-cr-8fL" secondAttribute="bottom" constant="104" id="Izz-pu-A7b"/>
+                                    <constraint firstItem="TeP-M2-dD8" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="282" id="FPI-xc-PzF"/>
+                                    <constraint firstItem="BEu-BX-icD" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="188" id="Jkh-Gc-vFP"/>
+                                    <constraint firstItem="0Ga-i7-jf4" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="95" id="KYM-uJ-guo"/>
                                     <constraint firstItem="Aig-cr-8fL" firstAttribute="leading" secondItem="TeP-M2-dD8" secondAttribute="leading" type="default" id="M4A-po-Ch5"/>
-                                    <constraint firstItem="9Kj-ii-dYO" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="76" id="OUN-Ba-OHO"/>
                                     <constraint firstItem="9Kj-ii-dYO" firstAttribute="leading" secondItem="0Ga-i7-jf4" secondAttribute="leading" type="default" id="Pus-dn-zkv"/>
                                     <constraint firstItem="EfW-fG-awN" firstAttribute="leading" secondItem="BEu-BX-icD" secondAttribute="leading" type="default" id="Rm1-H2-w3X"/>
-                                    <constraint firstItem="0Ga-i7-jf4" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="119" id="SX2-hW-T7J"/>
-                                    <constraint firstItem="EfW-fG-awN" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="168" id="ihJ-E6-Rqd"/>
+                                    <constraint firstItem="BEu-BX-icD" firstAttribute="centerX" secondItem="yw3-64-hKs" secondAttribute="centerX" type="default" id="U8K-zh-KAx"/>
+                                    <constraint firstItem="9Kj-ii-dYO" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="52" id="nY8-xO-CXJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aig-cr-8fL" secondAttribute="bottom" constant="40" id="nmO-YO-lHm"/>
+                                    <constraint firstItem="r1t-6F-YN5" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="236" id="pxO-rs-zbP"/>
                                     <constraint firstItem="BEu-BX-icD" firstAttribute="trailing" secondItem="EfW-fG-awN" secondAttribute="trailing" type="default" id="sIt-Hm-bbk"/>
                                     <constraint firstItem="r1t-6F-YN5" firstAttribute="trailing" secondItem="BEu-BX-icD" secondAttribute="trailing" type="default" id="shl-wH-7p8"/>
                                     <constraint firstAttribute="trailing" secondItem="9Kj-ii-dYO" secondAttribute="trailing" constant="74" id="tex-V0-WrF"/>
-                                    <constraint firstItem="TeP-M2-dD8" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="306" id="vPu-Nf-VFL"/>
                                     <constraint firstItem="0Ga-i7-jf4" firstAttribute="trailing" secondItem="9Kj-ii-dYO" secondAttribute="trailing" type="default" id="vTH-8E-Y2i"/>
+                                    <constraint firstItem="Aig-cr-8fL" firstAttribute="top" secondItem="yw3-64-hKs" secondAttribute="top" constant="333" id="wR1-ix-qB3"/>
                                     <constraint firstItem="TeP-M2-dD8" firstAttribute="trailing" secondItem="Aig-cr-8fL" secondAttribute="trailing" type="default" id="xMN-8z-V9i"/>
                                     <constraint firstItem="r1t-6F-YN5" firstAttribute="leading" secondItem="TeP-M2-dD8" secondAttribute="leading" type="default" id="zlm-68-yr1"/>
                                 </constraints>
@@ -354,19 +354,18 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H9p-D1-ABh">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="kEE-Qn-ZjC">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6Au-Q1-uI8">
                             <connections>
-                                <action selector="cancel:" destination="kf7-Qi-34F" id="1XY-ed-lfm"/>
+                                <action selector="cancel:" destination="kf7-Qi-34F" id="M77-KT-LTr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="userEmail" destination="BEu-BX-icD" id="xpS-c3-jxT"/>
-                        <outlet property="userFirstName" destination="9Kj-ii-dYO" id="XFK-cd-07H"/>
-                        <outlet property="userName" destination="0Ga-i7-jf4" id="Tng-6Y-yqS"/>
-                        <outlet property="userPassword1" destination="r1t-6F-YN5" id="qcS-ns-A5i"/>
-                        <outlet property="userPassword2" destination="TeP-M2-dD8" id="Fou-mk-vjQ"/>
-                        <outlet property="userPseudo" destination="EfW-fG-awN" id="4FQ-9e-0kM"/>
+                        <outlet property="registerUserEmailField" destination="BEu-BX-icD" id="JPe-g2-FKq"/>
+                        <outlet property="registerUserNameField" destination="0Ga-i7-jf4" id="laa-GS-3Na"/>
+                        <outlet property="registerUserPassword1Field" destination="r1t-6F-YN5" id="8sg-b7-VpM"/>
+                        <outlet property="registerUserPassword2Field" destination="TeP-M2-dD8" id="syb-YW-h2K"/>
+                        <outlet property="registerUserPseudoField" destination="EfW-fG-awN" id="l5j-SD-aSD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaa-nN-F7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,8 +419,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </state>
                                         <connections>
                                             <action selector="goToRegister:" destination="FXx-D8-upJ" eventType="touchUpInside" id="Pmk-er-XxU"/>
-                                            <action selector="signUpButton:" destination="FXx-D8-upJ" eventType="touchUpInside" id="qa1-6d-GIE"/>
-                                            <segue destination="6jM-M6-LfP" kind="modal" id="I5L-Zw-Lap"/>
+                                            <segue destination="6jM-M6-LfP" kind="modal" id="9PJ-eA-DYz"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Utilisateur" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ew-iV-Uph">
@@ -511,12 +509,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="register:"/>
-                <relationship kind="outlet" name="userEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userFirstName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userName" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userPassword1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userPassword2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userPseudo" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserEmailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserFirstNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserPassword1Field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserPassword2Field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="registerUserPseudoField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="loginViewController" superclassName="UIViewController">
