@@ -395,19 +395,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <action selector="logInButton:" destination="FXx-D8-upJ" eventType="touchUpInside" id="uGj-Ja-tJ7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vy-TD-LQr">
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="S'enregistrer">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signUpButton:" destination="FXx-D8-upJ" eventType="touchUpInside" id="tIM-UE-hMx"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-wj-cPx">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Pas encore inscrit ? ">
@@ -438,11 +425,23 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zog-5o-DEh">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Facebook">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="facebookLogin:" destination="FXx-D8-upJ" eventType="touchUpInside" id="VkC-q6-6hu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="I9D-Dw-cLe" firstAttribute="leading" secondItem="0Cc-AZ-iRV" secondAttribute="leading" type="default" id="4Li-8z-rjX"/>
-                                    <constraint firstItem="2Vy-TD-LQr" firstAttribute="baseline" secondItem="9ul-VC-Zxr" secondAttribute="baseline" type="default" id="Cko-xU-AEn"/>
-                                    <constraint firstItem="2Vy-TD-LQr" firstAttribute="trailing" secondItem="Z5Q-wj-cPx" secondAttribute="trailing" type="default" id="FcN-df-m12"/>
+                                    <constraint firstItem="zog-5o-DEh" firstAttribute="baseline" secondItem="9ul-VC-Zxr" secondAttribute="baseline" type="default" id="CfO-oe-r2i"/>
                                     <constraint firstItem="Z5Q-wj-cPx" firstAttribute="leading" secondItem="71u-kU-Wyp" secondAttribute="leading" constant="121" id="Fen-2p-7RH"/>
                                     <constraint firstItem="2ew-iV-Uph" firstAttribute="leading" secondItem="71u-kU-Wyp" secondAttribute="leading" constant="76" id="Gg4-FV-ogE"/>
                                     <constraint firstAttribute="bottom" secondItem="Z5Q-wj-cPx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Hzx-Nk-t4R"/>
@@ -451,9 +450,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <constraint firstItem="I9D-Dw-cLe" firstAttribute="leading" secondItem="2ew-iV-Uph" secondAttribute="leading" type="default" id="Vk0-dV-Z1H"/>
                                     <constraint firstItem="I9D-Dw-cLe" firstAttribute="top" secondItem="71u-kU-Wyp" secondAttribute="top" constant="115" id="XVt-DW-3YQ"/>
                                     <constraint firstItem="9ul-VC-Zxr" firstAttribute="top" secondItem="71u-kU-Wyp" secondAttribute="top" constant="196" id="YyR-8E-qDw"/>
+                                    <constraint firstItem="zog-5o-DEh" firstAttribute="leading" secondItem="71u-kU-Wyp" secondAttribute="leading" constant="185" id="aFb-tX-ij1"/>
                                     <constraint firstItem="9ul-VC-Zxr" firstAttribute="leading" secondItem="71u-kU-Wyp" secondAttribute="leading" constant="28" id="buh-bg-GaV"/>
-                                    <constraint firstAttribute="trailing" secondItem="2Vy-TD-LQr" secondAttribute="trailing" constant="28" id="ctK-3F-ZrG"/>
                                     <constraint firstItem="2ew-iV-Uph" firstAttribute="top" secondItem="71u-kU-Wyp" secondAttribute="top" constant="72" id="eeL-lR-AET"/>
+                                    <constraint firstItem="9ul-VC-Zxr" firstAttribute="top" secondItem="zog-5o-DEh" secondAttribute="top" type="default" id="lbA-3L-0oS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z5Q-wj-cPx" secondAttribute="trailing" constant="28" id="t8N-oU-VN1"/>
                                     <constraint firstItem="0Cc-AZ-iRV" firstAttribute="top" secondItem="71u-kU-Wyp" secondAttribute="top" constant="162" id="uUe-gz-W4F"/>
                                 </constraints>
                             </scrollView>
@@ -520,6 +521,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="loginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/loginViewController.h"/>
             <relationships>
+                <relationship kind="action" name="facebookLogin:"/>
                 <relationship kind="action" name="goToRegister:"/>
                 <relationship kind="action" name="logInButton:"/>
                 <relationship kind="action" name="signUpButton:"/>

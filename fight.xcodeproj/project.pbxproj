@@ -22,6 +22,7 @@
 		589748431770954D00FE6C21 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589748421770954D00FE6C21 /* FightViewController.m */; };
 		58974846177095D800FE6C21 /* FightDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58974845177095D800FE6C21 /* FightDetailViewController.m */; };
 		5897484F1771D46E00FE6C21 /* FightDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */; };
+		5F14BD2E177A066E00117F52 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14BD2D177A066E00117F52 /* FacebookSDK.framework */; };
 		5FBB527317782D960060FC27 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527217782D960060FC27 /* Login.m */; };
 		5FBB527817782EA80060FC27 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB527617782EA80060FC27 /* loginViewController.m */; };
 		5FC94D0B1778EE20006BFC62 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC94D0A1778EE20006BFC62 /* RegisterViewController.m */; };
@@ -50,6 +51,7 @@
 		58974845177095D800FE6C21 /* FightDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDetailViewController.m; sourceTree = "<group>"; };
 		5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescriptionViewController.h; sourceTree = "<group>"; };
 		5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescriptionViewController.m; sourceTree = "<group>"; };
+		5F14BD2D177A066E00117F52 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		5FBB527117782D960060FC27 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		5FBB527217782D960060FC27 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		5FBB527517782EA80060FC27 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				58974820177090B800FE6C21 /* Foundation.framework in Frameworks */,
 				58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */,
 				58974824177090B800FE6C21 /* CoreData.framework in Frameworks */,
+				5F14BD2E177A066E00117F52 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +96,7 @@
 		5897481C177090B800FE6C21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F14BD2D177A066E00117F52 /* FacebookSDK.framework */,
 				5897481D177090B800FE6C21 /* UIKit.framework */,
 				5897481F177090B800FE6C21 /* Foundation.framework */,
 				58974821177090B800FE6C21 /* CoreGraphics.framework */,
@@ -308,6 +312,10 @@
 		5897483D177090B800FE6C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";
@@ -320,6 +328,10 @@
 		5897483E177090B800FE6C21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";

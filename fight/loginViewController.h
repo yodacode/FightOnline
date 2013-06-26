@@ -16,8 +16,8 @@
 
 
 - (IBAction)logInButton:(id)sender;
-- (IBAction)signUpButton:(id)sender;
 - (IBAction)goToRegister:(id)sender;
+- (IBAction)facebookLogin:(id)sender;
 
 
 

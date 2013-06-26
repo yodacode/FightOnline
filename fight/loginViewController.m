@@ -69,35 +69,11 @@
 
 }
 
-- (IBAction)signUpButton:(id)sender {
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    NSManagedObject *newUser = [[NSManagedObject alloc]initWithEntity:entityDesc insertIntoManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    
-    //Pour verifier si l'utilisateur existe deja
-    [request setEntity:entityDesc];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userName like %@ ", self.loginUserTextField.text];
-    [request setPredicate:predicate];
-    
-    NSError *error;
-    NSArray *matchingData = [context executeFetchRequest:request error:&error];
-    
-    //on ajoute un utilisateur si la requete n'aboutit à rien
-    if(matchingData.count <=0){
-        [newUser setValue:self.loginUserTextField.text forKey:@"userName"];
-        [newUser setValue:self.loginPasswordTextField.text forKey:@"userPassword"];
-        [context save:&error];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Utilisateur ajouté" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Cet utilisateur existe deja" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-    }
+- (IBAction)goToRegister:(id)sender {
     
 }
 
-- (IBAction)goToRegister:(id)sender {
-    
+- (IBAction)facebookLogin:(id)sender {
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
