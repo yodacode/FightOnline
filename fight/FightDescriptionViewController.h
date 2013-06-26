@@ -14,7 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAddress;
 @property (weak, nonatomic) IBOutlet UILabel *labelFightersNumber;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateFight;
-@property (weak, nonatomic) IBOutlet UILabel *labelLongitude;
-@property (weak, nonatomic) IBOutlet UILabel *labelLatitude;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonGeoloc;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+
 
 @end

@@ -77,6 +77,7 @@
     
     if (self.fight) {
 
+        
         // Update existing fight
         [self.fight setValue:self.nameTextField.text forKey:@"name"];
         [self.fight setValue:self.addressTextField.text forKey:@"address"];
@@ -98,6 +99,7 @@
         
         NSDate * dateForFight = self.dateFight.date;
         [newFight setValue:dateForFight forKey:@"datefight"];
+        [newFight setValue:[NSNumber numberWithInteger:777] forKey:@"adminid"];
         
         
     }

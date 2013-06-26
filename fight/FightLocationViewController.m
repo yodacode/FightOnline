@@ -62,9 +62,11 @@
             CLLocationCoordinate2D coordinates;
             
             if([[self.fight valueForKey:@"latitude"] doubleValue] != 0 && [[self.fight valueForKey:@"longitude"] doubleValue] != 0) {
+                
                 coordinates.latitude = [[self.fight valueForKey:@"latitude"] doubleValue];
                 coordinates.longitude = [[self.fight valueForKey:@"longitude"] doubleValue];
             } else {
+                NSLog(@"toto");
                 coordinates.longitude = coordinate.longitude;
                 coordinates.latitude = coordinate.latitude;
             }
