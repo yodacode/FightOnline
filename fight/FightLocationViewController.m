@@ -61,21 +61,15 @@
             // Add an annotation
             CLLocationCoordinate2D coordinates;
             
-            if([[self.fight valueForKey:@"latitude"] doubleValue] != 0 && [[self.fight valueForKey:@"longitude"] doubleValue] != 0) {
-                coordinates.latitude = [[self.fight valueForKey:@"latitude"] doubleValue];
-                coordinates.longitude = [[self.fight valueForKey:@"longitude"] doubleValue];
-            } else {
-                coordinates.longitude = coordinate.longitude;
-                coordinates.latitude = coordinate.latitude;
-            }
+            coordinates.longitude = coordinate.longitude;
+            coordinates.latitude = coordinate.latitude;
+            
             
             MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
             point.coordinate = coordinates;
             point.title = [self.fight valueForKey:@"name"];
             point.subtitle = [self.fight valueForKey:@"address"];
             [self.mapView addAnnotation:point];
-            
-
             
             
         } else {

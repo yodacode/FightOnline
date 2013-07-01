@@ -81,8 +81,6 @@
         [self.fight setValue:self.nameTextField.text forKey:@"name"];
         [self.fight setValue:self.addressTextField.text forKey:@"address"];
         [self.fight setValue:[NSNumber numberWithInteger:[self.fighternumberTextField.text integerValue]] forKey:@"fightersnumber"];
-        [self.fight setValue:[NSNumber numberWithDouble:[self.longitudeTextField.text doubleValue]] forKey:@"longitude"];
-        [self.fight setValue:[NSNumber numberWithDouble:[self.latitudeTextField.text doubleValue]] forKey:@"latitude"];
         NSDate * dateForFight = self.dateFight.date;
         [self.fight setValue:dateForFight forKey:@"datefight"];
         
@@ -92,9 +90,6 @@
         [newFight setValue:self.nameTextField.text forKey:@"name"];
         [newFight setValue:self.addressTextField.text forKey:@"address"];
         [newFight setValue:[NSNumber numberWithInteger:[self.fighternumberTextField.text integerValue]] forKey:@"fightersnumber"];
-
-        [newFight setValue:[NSNumber numberWithDouble:[self.longitudeTextField.text doubleValue]] forKey:@"longitude"];
-        [newFight setValue:[NSNumber numberWithDouble:[self.latitudeTextField.text doubleValue]] forKey:@"latitude"];
         
         NSDate * dateForFight = self.dateFight.date;
         [newFight setValue:dateForFight forKey:@"datefight"];

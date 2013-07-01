@@ -169,6 +169,8 @@
 		58F6EEFB1781776900BC3B56 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F0B917822C4700BC3B56 /* User.h */,
+				58F6F0BA17822C4800BC3B56 /* User.m */,
 				58F6EEF81781775C00BC3B56 /* UserViewController.h */,
 				58F6EEF91781775C00BC3B56 /* UserViewController.m */,
 				58F6EF0017819E6700BC3B56 /* UserUpdateProfilViewController.h */,
@@ -187,8 +189,6 @@
 				58974844177095D800FE6C21 /* FightDetailViewController.h */,
 				58F6F0BC17822C4900BC3B56 /* Fight.h */,
 				58F6F0BD17822C4900BC3B56 /* Fight.m */,
-				58F6F0B917822C4700BC3B56 /* User.h */,
-				58F6F0BA17822C4800BC3B56 /* User.m */,
 				58E9CA6A17783D8600CDC9F8 /* FightLocationViewController.h */,
 				58E9CA6B17783D8600CDC9F8 /* FightLocationViewController.m */,
 				58974845177095D800FE6C21 /* FightDetailViewController.m */,

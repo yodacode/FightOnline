@@ -4,8 +4,6 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="datefight" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="fightersnumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="User" inverseName="fights" inverseEntity="User" syncable="YES"/>
     </entity>
@@ -15,7 +13,7 @@
         <relationship name="fights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Fight" inverseName="users" inverseEntity="Fight" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Fight" positionX="162" positionY="252" width="128" height="148"/>
+        <element name="Fight" positionX="162" positionY="252" width="128" height="118"/>
         <element name="User" positionX="-90" positionY="173" width="128" height="88"/>
     </elements>
 </model>
