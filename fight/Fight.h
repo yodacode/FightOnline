@@ -19,6 +19,14 @@
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) User *user;
+@property (nonatomic, retain) NSSet *users;
+@end
+
+@interface Fight (CoreDataGeneratedAccessors)
+
+- (void)addUsersObject:(User *)value;
+- (void)removeUsersObject:(User *)value;
+- (void)addUsers:(NSSet *)values;
+- (void)removeUsers:(NSSet *)values;
 
 @end

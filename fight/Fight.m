@@ -18,6 +18,6 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic name;
-@dynamic user;
+@dynamic users;
 
 @end

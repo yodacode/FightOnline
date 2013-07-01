@@ -7,12 +7,12 @@
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fights" inverseEntity="User" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="User" inverseName="fights" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="fights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Fight" inverseName="user" inverseEntity="Fight" syncable="YES"/>
+        <relationship name="fights" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Fight" inverseName="users" inverseEntity="Fight" syncable="YES"/>
     </entity>
     <elements>
         <element name="Fight" positionX="162" positionY="252" width="128" height="148"/>

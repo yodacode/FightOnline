@@ -67,7 +67,7 @@
     
     // Set relationships
     [user addFightsObject:fight];
-    [fight setUser:user];
+    [fight addUsersObject:user];
     
     
     // Save everything

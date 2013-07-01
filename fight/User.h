@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Fight;
 
 @interface User : NSManagedObject
 
@@ -19,8 +20,8 @@
 
 @interface User (CoreDataGeneratedAccessors)
 
-- (void)addFightsObject:(NSManagedObject *)value;
-- (void)removeFightsObject:(NSManagedObject *)value;
+- (void)addFightsObject:(Fight *)value;
+- (void)removeFightsObject:(Fight *)value;
 - (void)addFights:(NSSet *)values;
 - (void)removeFights:(NSSet *)values;
 

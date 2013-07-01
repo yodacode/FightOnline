@@ -7,6 +7,7 @@
 //
 
 #import "User.h"
+#import "Fight.h"
 
 
 @implementation User

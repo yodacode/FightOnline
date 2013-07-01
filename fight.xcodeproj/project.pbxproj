@@ -32,8 +32,8 @@
 		58E9CA71177986A200CDC9F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E9CA70177986A200CDC9F8 /* CoreLocation.framework */; };
 		58F6EEFA1781775C00BC3B56 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EEF91781775C00BC3B56 /* UserViewController.m */; };
 		58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */; };
-		58F6EF431782060300BC3B56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EF421782060300BC3B56 /* User.m */; };
-		58F6EF461782067F00BC3B56 /* Fight.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EF451782067F00BC3B56 /* Fight.m */; };
+		58F6F0BB17822C4800BC3B56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0BA17822C4800BC3B56 /* User.m */; };
+		58F6F0BE17822C4900BC3B56 /* Fight.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0BD17822C4900BC3B56 /* Fight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,10 +73,10 @@
 		58F6EEF91781775C00BC3B56 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		58F6EF0017819E6700BC3B56 /* UserUpdateProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUpdateProfilViewController.h; sourceTree = "<group>"; };
 		58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUpdateProfilViewController.m; sourceTree = "<group>"; };
-		58F6EF411782060200BC3B56 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		58F6EF421782060300BC3B56 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		58F6EF441782067F00BC3B56 /* Fight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fight.h; sourceTree = "<group>"; };
-		58F6EF451782067F00BC3B56 /* Fight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fight.m; sourceTree = "<group>"; };
+		58F6F0B917822C4700BC3B56 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		58F6F0BA17822C4800BC3B56 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		58F6F0BC17822C4900BC3B56 /* Fight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fight.h; sourceTree = "<group>"; };
+		58F6F0BD17822C4900BC3B56 /* Fight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fight.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +169,6 @@
 		58F6EEFB1781776900BC3B56 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				58F6EF411782060200BC3B56 /* User.h */,
-				58F6EF421782060300BC3B56 /* User.m */,
 				58F6EEF81781775C00BC3B56 /* UserViewController.h */,
 				58F6EEF91781775C00BC3B56 /* UserViewController.m */,
 				58F6EF0017819E6700BC3B56 /* UserUpdateProfilViewController.h */,
@@ -182,13 +180,15 @@
 		58F6EEFC1781777B00BC3B56 /* Fight */ = {
 			isa = PBXGroup;
 			children = (
-				58F6EF441782067F00BC3B56 /* Fight.h */,
-				58F6EF451782067F00BC3B56 /* Fight.m */,
 				5897484D1771D46E00FE6C21 /* FightDescriptionViewController.h */,
 				5897484E1771D46E00FE6C21 /* FightDescriptionViewController.m */,
 				58E9CA6D1778745400CDC9F8 /* Location.h */,
 				58E9CA6E1778745400CDC9F8 /* Location.m */,
 				58974844177095D800FE6C21 /* FightDetailViewController.h */,
+				58F6F0BC17822C4900BC3B56 /* Fight.h */,
+				58F6F0BD17822C4900BC3B56 /* Fight.m */,
+				58F6F0B917822C4700BC3B56 /* User.h */,
+				58F6F0BA17822C4800BC3B56 /* User.m */,
 				58E9CA6A17783D8600CDC9F8 /* FightLocationViewController.h */,
 				58E9CA6B17783D8600CDC9F8 /* FightLocationViewController.m */,
 				58974845177095D800FE6C21 /* FightDetailViewController.m */,
@@ -278,8 +278,8 @@
 				58E9CA6F1778745400CDC9F8 /* Location.m in Sources */,
 				58F6EEFA1781775C00BC3B56 /* UserViewController.m in Sources */,
 				58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */,
-				58F6EF431782060300BC3B56 /* User.m in Sources */,
-				58F6EF461782067F00BC3B56 /* Fight.m in Sources */,
+				58F6F0BB17822C4800BC3B56 /* User.m in Sources */,
+				58F6F0BE17822C4900BC3B56 /* Fight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
