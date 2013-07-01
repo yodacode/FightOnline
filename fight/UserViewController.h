@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UserViewController : UITableViewController
-
+@property (strong) NSManagedObject *user;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @end
