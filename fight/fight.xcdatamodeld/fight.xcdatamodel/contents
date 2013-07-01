@@ -2,22 +2,13 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12C3103" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Fight" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adminid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="datefight" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="fightersnumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
-        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userFirstName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userPassword" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userPseudo" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
-        <element name="Fight" positionX="160" positionY="192" width="128" height="150"/>
-        <element name="User" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Fight" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

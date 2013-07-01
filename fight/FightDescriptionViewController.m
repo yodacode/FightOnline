@@ -30,24 +30,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    
-    
     if (self.fight) {
         
-        NSNumber * adminid = [self.fight valueForKey:@"adminid"];
-
-                
-        if([adminid intValue] == 999) {
-            self.editButton.hidden = YES;
-        }
-        
-        self.navigationItem.title = [self.fight valueForKey:@"name"];
         self.labelName.text = [self.fight valueForKey:@"name"];
         self.labelAddress.text = [self.fight valueForKey:@"address"];
         
         NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
         self.labelFightersNumber.text = fightersnumber;
+        
+//        NSString *longitude = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"longitude"]];
+  //      self.labelLongitude.text = longitude;
+        
+        NSString *longitude = [NSString stringWithFormat:@"%f", [[self.fight valueForKey:@"longitude"] doubleValue]];
+        self.labelLongitude.text = longitude;
+        
+        NSString *latitude = [NSString stringWithFormat:@"%f", [[self.fight valueForKey:@"latitude"] doubleValue]];
+        self.labelLatitude.text = latitude;
         
         NSDate *fightdate = [self.fight valueForKey:@"datefight"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -70,6 +68,8 @@
 {
     
     
+  //  UIButton *buttonThatWasPressed = (UIButton *)sender;
+//    buttonThatWasPressed.enabled = NO;
     
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;
@@ -82,7 +82,5 @@
         destViewController.fight  = selectedFight;
     }
 }
-
-
 
 @end
