@@ -31,6 +31,7 @@
 		58E9CA6F1778745400CDC9F8 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E9CA6E1778745400CDC9F8 /* Location.m */; };
 		58E9CA71177986A200CDC9F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E9CA70177986A200CDC9F8 /* CoreLocation.framework */; };
 		58F6EEFA1781775C00BC3B56 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EEF91781775C00BC3B56 /* UserViewController.m */; };
+		58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		58E9CA70177986A200CDC9F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		58F6EEF81781775C00BC3B56 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		58F6EEF91781775C00BC3B56 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		58F6EF0017819E6700BC3B56 /* UserUpdateProfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserUpdateProfilViewController.h; sourceTree = "<group>"; };
+		58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserUpdateProfilViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 			children = (
 				58F6EEF81781775C00BC3B56 /* UserViewController.h */,
 				58F6EEF91781775C00BC3B56 /* UserViewController.m */,
+				58F6EF0017819E6700BC3B56 /* UserUpdateProfilViewController.h */,
+				58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				58E9CA6C17783D8600CDC9F8 /* FightLocationViewController.m in Sources */,
 				58E9CA6F1778745400CDC9F8 /* Location.m in Sources */,
 				58F6EEFA1781775C00BC3B56 /* UserViewController.m in Sources */,
+				58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

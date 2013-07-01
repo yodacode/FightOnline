@@ -7,6 +7,7 @@
 //
 
 #import "UserViewController.h"
+#import "UserUpdateProfilViewController.h"
 
 @interface UserViewController ()
 
@@ -37,40 +38,38 @@
 {
     [super viewDidLoad];
 
-    NSManagedObjectContext *context = [self managedObjectContext];    
+    NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSEntityDescription *entitydesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entitydesc];
+    NSFetchRequest *request= [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Benjamin", @"DEVAUBLANC"];
+    [request setEntity:entity];
     [request setPredicate:predicate];
     
     NSError *error;
-    NSArray *matchingData = [context executeFetchRequest:request error:&error];
-
+    //Making a mutable copy here makes no sense.  There is never a reason to make this mutable
+    //NSArray *entities = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    id currentUser = [[context executeFetchRequest:request error:&error] lastObject];
+    request = nil;
+    
+    
     //si il n'y a pas de resultats
-    if(matchingData.count <= 0)
+    if(!currentUser)
     {
+        NSLog(@"Current USER EXIST PAS");
         NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
         [newUser setValue:@"DEVAUBLANC" forKey:@"name"];
         [newUser setValue:@"Benjamin" forKey:@"firstname"];
         self.user = newUser;
         [self.managedObjectContext save:nil];
+        
     } else
     {
-        NSString *firstName;
-        NSString *lastName;
-        for(NSManagedObject *obj in matchingData){
-            firstName = [obj valueForKey:@"firstname"];
-            lastName = [obj valueForKey:@"name"];
-        }
-    
-
-        self.nameLabel.text = [NSString stringWithFormat:@"%@, %@",firstName, lastName];
-    
+        self.user = currentUser;
+        self.nameLabel.text = [NSString stringWithFormat:@"%@, %@",[self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
     }
-
+    
 
 }
 
@@ -85,6 +84,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([[segue identifier] isEqualToString:@"UpdateProfil"]) {
+        NSManagedObject *selectedFight = self.user;
+        UserUpdateProfilViewController *destViewController = segue.destinationViewController;
+        destViewController.user  = selectedFight;
+    }
+  
+}
+
+
 
 
 
