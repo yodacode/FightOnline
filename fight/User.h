@@ -12,11 +12,16 @@
 
 @interface User : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * firstname;
-
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSSet *fights;
 @end
 
 @interface User (CoreDataGeneratedAccessors)
+
+- (void)addFightsObject:(NSManagedObject *)value;
+- (void)removeFightsObject:(NSManagedObject *)value;
+- (void)addFights:(NSSet *)values;
+- (void)removeFights:(NSSet *)values;
 
 @end

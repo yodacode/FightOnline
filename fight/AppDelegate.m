@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Fight.h"
+#import "User.h"
 
 @implementation AppDelegate
 
@@ -14,8 +16,12 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self create]; 
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -29,7 +35,45 @@
     [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
     [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
     
+    
+    
     return YES;
+}
+
+- (void) create {
+    // Grab the context
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Grab the Label entity
+    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    
+    // Set label name
+    user.name = @"Doe";
+    user.firstname = @"John";
+    
+    
+    // Insert the Artist entity
+    Fight *test = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    
+  
+    
+    
+    
+    // Set relationships
+    [user addFights:test];
+    [test setUser:user];
+    
+    
+    
+    
+    
+    // Save everything
+    NSError *error = nil;
+    if ([context save:&error]) {
+        NSLog(@"The save was successful!");
+    } else {
+        NSLog(@"The save wasn't successful: %@", [error userInfo]);
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -67,6 +67,8 @@
     } else
     {
         self.user = currentUser;
+    
+//        NSManagedObjectID *moID = [self.user objectID];
         self.nameLabel.text = [NSString stringWithFormat:@"%@, %@",[self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
     }
     

@@ -11,7 +11,8 @@
 
 @implementation User
 
-@dynamic name;
 @dynamic firstname;
+@dynamic name;
+@dynamic fights;
 
 @end
