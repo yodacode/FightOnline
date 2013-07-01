@@ -51,20 +51,23 @@
     user.name = @"Doe";
     user.firstname = @"John";
     
-    
     // Insert the Artist entity
-    Fight *test = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    Fight *fight = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    fight.name = @"Baston Free fight";
+    fight.address = @"28 rue Troyon Sevres France";
     
-  
+    // Create a Date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/YYYY"];
+    NSDate *dateFight = [dateFormatter dateFromString:@"2003"];
+    fight.datefight = dateFight;
     
-    
+    NSNumber * fightersNumber = [NSNumber numberWithInteger:14];
+    fight.fightersnumber = fightersNumber;
     
     // Set relationships
-    [user addFights:test];
-    [test setUser:user];
-    
-    
-    
+    [user addFightsObject:fight];
+    [fight setUser:user];
     
     
     // Save everything
