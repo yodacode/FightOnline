@@ -10,6 +10,7 @@
 
 @interface FightDescrViewController : UITableViewController
 @property (strong) NSManagedObject *fight;
+@property (strong) NSManagedObject *user;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelAddress;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateFight;

@@ -9,6 +9,8 @@
 #import "FightDescrViewController.h"
 #import "FightDetailViewController.h"
 #import "FightLocationViewController.h"
+#import "User.h"
+#import "Fight.h"
 
 @interface FightDescrViewController ()
 
@@ -60,7 +62,13 @@
             self.labelDispo.textColor=[UIColor redColor];
             self.cellParticipate.hidden = YES;
         }
-        
+
+        if([self isInfight]){
+            self.labelDispo.textLabel.text = @"Vous y participez";
+            self.labelDispo.textColor=[UIColor blueColor];
+            self.cellParticipate.hidden = YES;
+        }
+    
     }
     
     [self.tableView reloadData];
@@ -91,6 +99,19 @@
     return context;
 }
 
+- (BOOL) isInfight {
+    id currentFight = self.fight;
+    Fight * thisFight = currentFight;
+    NSSet *users = thisFight.users;
+    
+    if(users.count > 0) {
+        return YES;
+    } else {
+        return NO;
+    }
+    
+    
+}
 
 - (IBAction)participate:(id)sender {
     if(self.fight){
@@ -109,6 +130,33 @@
         
         number = [NSNumber numberWithInt:value + 1];        
         [self.fight setValue:number forKey:@"fightersattending"];
+        
+        
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
+        [fetchRequest setEntity:entity];
+        [fetchRequest setPredicate:predicate];
+        NSError *error0 = nil;
+        id currentUser = [[context executeFetchRequest:fetchRequest error:&error0] lastObject];
+        User * user2 = currentUser;
+        
+        NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context];
+        NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"name like %@", [self.fight valueForKey:@"name"]];
+        [fetchRequest setEntity:entity2];
+        [fetchRequest setPredicate:predicate2];
+        NSError *error2 = nil;
+        id currentFight = [[context executeFetchRequest:fetchRequest error:&error2] lastObject];
+        Fight * fight2 = currentFight;
+        
+        // Set relationships
+       [user2 addFightsObject:fight2];
+        //[fight addUsersObject:user];
+        
+        
+        
         NSError *error = nil;
         [context save:&error];
 

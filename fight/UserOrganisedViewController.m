@@ -122,6 +122,7 @@
         NSManagedObject *selectedFight = [self.fights objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
         FightDescrViewController *destViewController = segue.destinationViewController;
         destViewController.fight  = selectedFight;
+        destViewController.user = self.user;
     }
 }
 
