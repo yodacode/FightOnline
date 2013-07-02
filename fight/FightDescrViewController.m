@@ -122,7 +122,7 @@
         int dispoValue = [dispo intValue];
         int value = [number intValue];
         
-        if(dispoValue-1 == value){
+        if(dispoValue - 1 == value){
             self.cellParticipate.hidden = YES;
             self.labelDispo.textLabel.text = @"Complet";
             self.labelDispo.textColor=[UIColor redColor];
@@ -130,7 +130,6 @@
         
         number = [NSNumber numberWithInt:value + 1];        
         [self.fight setValue:number forKey:@"fightersattending"];
-        
         
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
