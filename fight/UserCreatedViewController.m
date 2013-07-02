@@ -8,6 +8,7 @@
 
 #import "UserCreatedViewController.h"
 #import "UserViewController.h"
+#import "FightDescrViewController.h"
 @interface UserCreatedViewController ()
 @property (strong) NSMutableArray *fights;
 @end
@@ -121,8 +122,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"GetFight"]) {
-    
+    if ([[segue identifier] isEqualToString:@"GetDetailFight"]) {
+        NSManagedObject *selectedFight = [self.fights objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        FightDescrViewController *destViewController = segue.destinationViewController;
+        destViewController.fight  = selectedFight;
     }
 }
 

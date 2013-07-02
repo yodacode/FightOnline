@@ -30,7 +30,6 @@
 {
     [super viewDidLoad];
 
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -42,11 +41,25 @@
         NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
         self.labelFightersNumber.text = fightersnumber;
         
+        NSString *fightersattending = [NSString stringWithFormat:@"%@ %@", [self.fight valueForKey:@"fightersattending"],@"/"];
+        self.labelFightersAttending.text = fightersattending;
+        
         NSDate *fightdate = [self.fight valueForKey:@"datefight"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"dd/MM/yyyy"];
         NSString *stringFromDate = [formatter stringFromDate:fightdate];
         self.labelDateFight.text = stringFromDate;
+        
+        NSNumber *dispo = [self.fight valueForKey:@"fightersnumber"];
+        NSNumber *number = [self.fight valueForKey:@"fightersattending"];
+        int dispoValue = [dispo intValue];
+        int value = [number intValue];
+        
+        if(dispoValue == value){
+            self.labelDispo.textLabel.text = @"Complet";
+            self.labelDispo.textColor=[UIColor redColor];
+            self.cellParticipate.hidden = YES;
+        }
         
     }
     
@@ -56,9 +69,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    
-    //  UIButton *buttonThatWasPressed = (UIButton *)sender;
-    //    buttonThatWasPressed.enabled = NO;
     
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;
@@ -72,4 +82,37 @@
     }
 }
 
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+
+- (IBAction)participate:(id)sender {
+    if(self.fight){
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        NSNumber *dispo = [self.fight valueForKey:@"fightersnumber"];
+        NSNumber *number = [self.fight valueForKey:@"fightersattending"];
+        int dispoValue = [dispo intValue];
+        int value = [number intValue];
+        
+        if(dispoValue-1 == value){
+            self.cellParticipate.hidden = YES;
+            self.labelDispo.textLabel.text = @"Complet";
+            self.labelDispo.textColor=[UIColor redColor];
+        }
+        
+        number = [NSNumber numberWithInt:value + 1];        
+        [self.fight setValue:number forKey:@"fightersattending"];
+        NSError *error = nil;
+        [context save:&error];
+
+        [self viewDidAppear:YES];
+    }
+}
 @end

@@ -75,7 +75,7 @@
     // Configure the cell...
     NSManagedObject *fight = [self.fights objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [fight valueForKey:@"name"]]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@ %@ %@ %@", @"(", [fight valueForKey:@"fightersnumber"], @")", [fight valueForKey:@"address"]]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@", @"(",[fight valueForKey:@"fightersattending"], @"/", [fight valueForKey:@"fightersnumber"], @")", [fight valueForKey:@"address"]]];
     
     return cell;
 }

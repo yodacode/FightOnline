@@ -8,6 +8,7 @@
 
 #import "UserOrganisedViewController.h"
 #import "UserViewController.h"
+#import "FightDescrViewController.h"
 #import "User.h"
 #import "Fight.h"
 
@@ -36,7 +37,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+
     NSManagedObjectContext *context = [self managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -117,8 +118,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"GetFight"]) {
-        
+    if ([[segue identifier] isEqualToString:@"GetDetailFight"]) {
+        NSManagedObject *selectedFight = [self.fights objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        FightDescrViewController *destViewController = segue.destinationViewController;
+        destViewController.fight  = selectedFight;
     }
 }
 
