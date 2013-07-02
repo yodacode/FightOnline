@@ -20,8 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    [self create]; 
+    //[self create];
+    [self read];
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -40,35 +40,45 @@
     return YES;
 }
 
+
 - (void) create {
     // Grab the context
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    // Grab the Label entity
+    // Grab the User entity
     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     
-    // Set label name
-    user.name = @"Doe";
-    user.firstname = @"John";
+    // Set a User
+    user.name = @"Nolimit";
+    user.firstname = @"Fred";
     
-    // Insert the Artist entity
+    // Insert the Fight entity
     Fight *fight = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
-    fight.name = @"Baston Free fight";
+    fight.name = @"Hideout kikk";
     fight.address = @"28 rue Troyon Sevres France";
     
     // Create a Date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/YYYY"];
-    NSDate *dateFight = [dateFormatter dateFromString:@"2003"];
+    NSDate *dateFight = [dateFormatter dateFromString:@"04/11/2014"];
     fight.datefight = dateFight;
     
     NSNumber * fightersNumber = [NSNumber numberWithInteger:14];
     fight.fightersnumber = fightersNumber;
     
-    // Set relationships
-    [user addFightsObject:fight];
-    [fight addUsersObject:user];
+    //Create fight 2
+    Fight *fight2 = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    fight2.name = @"Om fire";
+    fight2.address = @"Trocadero Paris France";
     
+    // Set relationships
+    //[user addFightsObject:fight];
+    //[fight addUsersObject:user];
+    
+    // Set relationships
+    [user addFights:[NSSet setWithObjects:fight, fight2, nil]];
+    //[user addFights:[NSSet setWithObject:fight,fight2,nil]];
+
     
     // Save everything
     NSError *error = nil;
@@ -77,6 +87,44 @@
     } else {
         NSLog(@"The save wasn't successful: %@", [error userInfo]);
     }
+}
+
+- (void) read {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Construct a fetch request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:context];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    //NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    id currentUser = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
+    
+    User * user = currentUser;
+    
+    NSSet *fights = user.fights;
+    for (Fight *fight in fights) {
+        NSLog(@"\t\t%@ ", fight.name);
+        
+    }
+    
+    /*for (User *user in fetchedObjects) {
+        // Log the label details
+        
+        NSLog(@"%@, %@ ", user.name, user.firstname);
+        
+        NSLog(@"\tA organisé la fight:");
+        NSSet *fights = user.fights;
+        for (Fight *fight in fights) {
+            NSLog(@"\t\t%@ ", fight.name);
+            
+        }
+    }*/
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

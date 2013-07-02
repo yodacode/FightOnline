@@ -10,5 +10,7 @@
 
 @interface UserViewController : UITableViewController
 @property (strong) NSManagedObject *user;
+@property (strong) NSManagedObject *fights;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *organisedLabel;
 @end

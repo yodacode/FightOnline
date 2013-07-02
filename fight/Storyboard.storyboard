@@ -93,14 +93,19 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Fights" id="wuy-CQ-Wif">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="54" id="o4W-KQ-LhD">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="54" id="o4W-KQ-LhD">
                                         <rect key="frame" x="0.0" y="138" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="53"/>
+                                            <rect key="frame" x="10" y="1" width="280" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Organisé : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtk-ws-cQp">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOU-4k-ziP">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,15 +114,20 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="21" id="8pd-NM-vuz"/>
-                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="top" secondItem="o4W-KQ-LhD" secondAttribute="top" constant="13" id="Yy6-wk-aPg"/>
+                                            <constraint firstItem="JOU-4k-ziP" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="119" id="6T5-YD-QXV"/>
+                                            <constraint firstItem="JOU-4k-ziP" firstAttribute="baseline" secondItem="vtk-ws-cQp" secondAttribute="baseline" type="default" id="J4t-rX-hLd"/>
+                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="22" id="TDF-Wg-tK8"/>
+                                            <constraint firstItem="JOU-4k-ziP" firstAttribute="centerY" secondItem="o4W-KQ-LhD" secondAttribute="centerY" type="default" id="Vg2-u2-TBe"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="MEA-fx-kJB" kind="push" identifier="GetFightOrganised" id="2T2-ev-4Ff"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="48" id="zbA-T8-BVQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="48" id="zbA-T8-BVQ">
                                         <rect key="frame" x="0.0" y="193" width="320" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="47"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Participé :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cij-MR-ndr">
@@ -132,6 +142,9 @@
                                             <constraint firstItem="cij-MR-ndr" firstAttribute="top" secondItem="zbA-T8-BVQ" secondAttribute="top" constant="10" id="3Lr-aB-izY"/>
                                             <constraint firstItem="cij-MR-ndr" firstAttribute="leading" secondItem="zbA-T8-BVQ" secondAttribute="leading" constant="20" type="default" id="QQE-FU-G41"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="TYG-e7-Jnl" kind="push" identifier="GetFightAttending" id="f0G-6E-bXy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -143,11 +156,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameLabel" destination="XFP-Db-NoW" id="JiY-2A-N6Y"/>
+                        <outlet property="organisedLabel" destination="JOU-4k-ziP" id="BhB-Iz-LhQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dp7-cN-fXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="878"/>
+            <point key="canvasLocation" x="1995" y="878"/>
         </scene>
         <!--User Update Profil View Controller-->
         <scene sceneID="myv-cY-yRm">
@@ -162,7 +176,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0Q-bp-fPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2403" y="878"/>
+            <point key="canvasLocation" x="2647" y="706"/>
+        </scene>
+        <!--User Attending View Controller-->
+        <scene sceneID="OnX-jy-Y6y">
+            <objects>
+                <tableViewController id="TYG-e7-Jnl" customClass="UserAttendingViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="R6T-bB-QYZ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="sQw-Cf-156">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TYG-e7-Jnl" id="27D-LJ-QK0"/>
+                            <outlet property="delegate" destination="TYG-e7-Jnl" id="Jpc-KE-PAk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="okW-zV-G9C"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPi-iS-JMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647" y="2061"/>
+        </scene>
+        <!--User Organised View Controller-->
+        <scene sceneID="Izw-p9-EmK">
+            <objects>
+                <tableViewController id="MEA-fx-kJB" customClass="UserOrganisedViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RyW-gS-0fB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="wIH-bG-v3G">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MEA-fx-kJB" id="yam-yX-C8Q"/>
+                            <outlet property="delegate" destination="MEA-fx-kJB" id="ADa-xA-0Ag"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Yt-Pp-TkC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egS-DR-EkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647" y="1377"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="JU1-QX-2yK">
@@ -397,15 +471,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstAttribute="trailing" secondItem="urd-XQ-lAz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Cgw-OK-5at"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="60" id="GHb-BS-iWm"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="IWp-Au-XpM"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="239" id="M4P-cV-OoU"/>
                             <constraint firstItem="urd-XQ-lAz" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="16" id="SRq-QV-i8a"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="103" id="afy-L9-Z0x"/>
                             <constraint firstAttribute="trailing" secondItem="1gV-2C-JdW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bGF-fo-9lL"/>
+                            <constraint firstAttribute="bottom" secondItem="drF-I3-WDi" secondAttribute="bottom" constant="89" id="bKL-DY-JV9"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="centerX" secondItem="UuC-Pf-tIq" secondAttribute="centerX" type="default" id="c2k-2V-MVz"/>
                             <constraint firstItem="1gV-2C-JdW" firstAttribute="centerX" secondItem="drF-I3-WDi" secondAttribute="centerX" type="default" id="gC3-O7-jT4"/>
+                            <constraint firstItem="drF-I3-WDi" firstAttribute="top" secondItem="UuC-Pf-tIq" secondAttribute="top" constant="150" id="gfd-vj-Gsd"/>
                             <constraint firstAttribute="trailing" secondItem="Ae5-oK-W1g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hFi-Ey-DOK"/>
                             <constraint firstItem="Ae5-oK-W1g" firstAttribute="leading" secondItem="UuC-Pf-tIq" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hLU-zP-Sei"/>
-                            <constraint firstItem="1gV-2C-JdW" firstAttribute="centerX" secondItem="UuC-Pf-tIq" secondAttribute="centerX" type="default" id="mlu-jh-Pk0"/>
-                            <constraint firstItem="drF-I3-WDi" firstAttribute="bottom" secondItem="UuC-Pf-tIq" secondAttribute="bottom" type="default" id="xwx-6E-VWN"/>
                         </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Ajouter" id="5HD-Dt-MvP">
@@ -491,13 +565,65 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="Default@2x.png" width="640" height="960"/>
     </resources>
+    <classes>
+        <class className="FightDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelDateFight" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelFightersNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLatitude" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLongitude" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FightDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="addressTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateFight" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="fighternumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FightLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightLocationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="FightViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FightViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UserAttendingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserAttendingViewController.h"/>
+        </class>
+        <class className="UserOrganisedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserOrganisedViewController.h"/>
+        </class>
+        <class className="UserUpdateProfilViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserUpdateProfilViewController.h"/>
+        </class>
+        <class className="UserViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="organisedLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BNI-ph-lkx"/>
         <segue reference="Iqb-jc-5VB"/>
+        <segue reference="LXy-u9-VAx"/>
     </inferredMetricsTieBreakers>
 </document>

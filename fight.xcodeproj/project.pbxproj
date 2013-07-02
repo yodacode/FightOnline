@@ -34,6 +34,8 @@
 		58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6EF0117819E6700BC3B56 /* UserUpdateProfilViewController.m */; };
 		58F6F0BB17822C4800BC3B56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0BA17822C4800BC3B56 /* User.m */; };
 		58F6F0BE17822C4900BC3B56 /* Fight.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0BD17822C4900BC3B56 /* Fight.m */; };
+		58F6F0C11782CCD700BC3B56 /* UserOrganisedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */; };
+		58F6F0C41782E37000BC3B56 /* UserAttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0C31782E36F00BC3B56 /* UserAttendingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,10 @@
 		58F6F0BA17822C4800BC3B56 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		58F6F0BC17822C4900BC3B56 /* Fight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fight.h; sourceTree = "<group>"; };
 		58F6F0BD17822C4900BC3B56 /* Fight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fight.m; sourceTree = "<group>"; };
+		58F6F0BF1782CCD500BC3B56 /* UserOrganisedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserOrganisedViewController.h; sourceTree = "<group>"; };
+		58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserOrganisedViewController.m; sourceTree = "<group>"; };
+		58F6F0C21782E36E00BC3B56 /* UserAttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAttendingViewController.h; sourceTree = "<group>"; };
+		58F6F0C31782E36F00BC3B56 /* UserAttendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAttendingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,8 @@
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
 				5897483F177091D400FE6C21 /* Storyboard.storyboard */,
+				58F6F0C21782E36E00BC3B56 /* UserAttendingViewController.h */,
+				58F6F0C31782E36F00BC3B56 /* UserAttendingViewController.m */,
 				58974826177090B800FE6C21 /* Supporting Files */,
 			);
 			path = fight;
@@ -169,6 +177,8 @@
 		58F6EEFB1781776900BC3B56 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F0BF1782CCD500BC3B56 /* UserOrganisedViewController.h */,
+				58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */,
 				58F6F0B917822C4700BC3B56 /* User.h */,
 				58F6F0BA17822C4800BC3B56 /* User.m */,
 				58F6EEF81781775C00BC3B56 /* UserViewController.h */,
@@ -280,6 +290,8 @@
 				58F6EF0217819E6700BC3B56 /* UserUpdateProfilViewController.m in Sources */,
 				58F6F0BB17822C4800BC3B56 /* User.m in Sources */,
 				58F6F0BE17822C4900BC3B56 /* Fight.m in Sources */,
+				58F6F0C11782CCD700BC3B56 /* UserOrganisedViewController.m in Sources */,
+				58F6F0C41782E37000BC3B56 /* UserAttendingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     if (self.fight) {
-        
         self.labelName.text = [self.fight valueForKey:@"name"];
         self.labelAddress.text = [self.fight valueForKey:@"address"];
         

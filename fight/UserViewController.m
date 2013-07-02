@@ -8,6 +8,9 @@
 
 #import "UserViewController.h"
 #import "UserUpdateProfilViewController.h"
+#import "UserOrganisedViewController.h"
+#import "User.h"
+#import "Fight.h"
 
 @interface UserViewController ()
 
@@ -15,6 +18,7 @@
 
 @implementation UserViewController
 @synthesize user;
+@synthesize fights;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,42 +41,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSFetchRequest *request= [[NSFetchRequest alloc] init];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Benjamin", @"DEVAUBLANC"];
-    [request setEntity:entity];
-    [request setPredicate:predicate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setPredicate:predicate];
     
-    NSError *error;
-    //Making a mutable copy here makes no sense.  There is never a reason to make this mutable
-    //NSArray *entities = [[managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-    id currentUser = [[context executeFetchRequest:request error:&error] lastObject];
-    request = nil;
+    NSError *error = nil;
     
+    id currentUser = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
+    fetchRequest = nil;
+    self.user = currentUser;
     
-    //si il n'y a pas de resultats
-    if(!currentUser)
-    {
-        NSLog(@"Current USER EXIST PAS");
-        NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
-        [newUser setValue:@"DEVAUBLANC" forKey:@"name"];
-        [newUser setValue:@"Benjamin" forKey:@"firstname"];
-        self.user = newUser;
-        [self.managedObjectContext save:nil];
-        
-    } else
-    {
-        self.user = currentUser;
+    User * cuser = currentUser;
+    NSSet *tapes = cuser.fights;
+    NSNumber * counterFight = [NSNumber numberWithInt:tapes.count];
     
-//        NSManagedObjectID *moID = [self.user objectID];
-        self.nameLabel.text = [NSString stringWithFormat:@"%@, %@",[self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
+    //init render
+    self.organisedLabel.text = [NSString stringWithFormat:@"%@,%@", counterFight, @" tapes"];
+    self.nameLabel.text = [NSString stringWithFormat:@"%@,%@", [self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
+    
+    for (Fight *fight in tapes) {
+        NSLog(@"\t\t%@ ", fight.name);
     }
     
-
+    [self.tableView reloadData];
 }
 
 - (void)viewDidUnload
@@ -91,11 +94,16 @@
 {
     
     if ([[segue identifier] isEqualToString:@"UpdateProfil"]) {
-        NSManagedObject *selectedFight = self.user;
+        NSManagedObject *selectedUser = self.user;
         UserUpdateProfilViewController *destViewController = segue.destinationViewController;
-        destViewController.user  = selectedFight;
+        destViewController.user  = selectedUser;
     }
-  
+    if ([[segue identifier] isEqualToString:@"GetFightOrganised"]) {
+        NSManagedObject *selectedUser = self.user;
+         UserOrganisedViewController *destViewController = segue.destinationViewController;
+        destViewController.user  = selectedUser;
+    }
+
 }
 
 
