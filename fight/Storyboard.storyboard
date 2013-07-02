@@ -271,7 +271,7 @@
             <objects>
                 <tableViewController id="2eW-g8-Gt1" customClass="FightDescrViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="y0S-sm-dCv">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -551,7 +551,7 @@
             <objects>
                 <viewController id="2tQ-Kn-qT3" customClass="FightLocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1g-q3-8Na">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qh1-Lq-BkN"/>
@@ -578,7 +578,7 @@
             <objects>
                 <viewController id="Ylf-JU-4uF" customClass="FightDetailViewController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UuC-Pf-tIq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de participants" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-2C-JdW">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -698,7 +698,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EW-mV-INZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="-103"/>
+            <point key="canvasLocation" x="-212" y="-119"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="68m-EH-rwo">
@@ -728,8 +728,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pnL-aq-oy8"/>
+        <segue reference="LXy-u9-VAx"/>
+        <segue reference="WaQ-6f-0o7"/>
         <segue reference="Iqb-jc-5VB"/>
-        <segue reference="Uth-GY-vJ2"/>
     </inferredMetricsTieBreakers>
 </document>
