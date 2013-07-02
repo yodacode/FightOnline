@@ -93,6 +93,7 @@
         
         NSDate * dateForFight = self.dateFight.date;
         [newFight setValue:dateForFight forKey:@"datefight"];
+        [newFight setValue:@"Nolimit" forKey:@"adminname"];
         
         
     }

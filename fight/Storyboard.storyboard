@@ -100,7 +100,7 @@
                                             <rect key="frame" x="10" y="1" width="280" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Organisé : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtk-ws-cQp">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Participé :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtk-ws-cQp">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,9 +115,9 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="JOU-4k-ziP" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="119" id="6T5-YD-QXV"/>
+                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="22" id="Ca2-K8-K6I"/>
                                             <constraint firstItem="JOU-4k-ziP" firstAttribute="baseline" secondItem="vtk-ws-cQp" secondAttribute="baseline" type="default" id="J4t-rX-hLd"/>
-                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="leading" secondItem="o4W-KQ-LhD" secondAttribute="leading" constant="22" id="TDF-Wg-tK8"/>
-                                            <constraint firstItem="JOU-4k-ziP" firstAttribute="centerY" secondItem="o4W-KQ-LhD" secondAttribute="centerY" type="default" id="Vg2-u2-TBe"/>
+                                            <constraint firstItem="vtk-ws-cQp" firstAttribute="centerY" secondItem="o4W-KQ-LhD" secondAttribute="centerY" type="default" id="T25-P3-RR9"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="MEA-fx-kJB" kind="push" identifier="GetFightOrganised" id="2T2-ev-4Ff"/>
@@ -130,7 +130,12 @@
                                             <rect key="frame" x="10" y="0.0" width="280" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Participé :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cij-MR-ndr">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Créé :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cij-MR-ndr">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOe-WJ-jPU">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,9 +146,11 @@
                                         <constraints>
                                             <constraint firstItem="cij-MR-ndr" firstAttribute="top" secondItem="zbA-T8-BVQ" secondAttribute="top" constant="10" id="3Lr-aB-izY"/>
                                             <constraint firstItem="cij-MR-ndr" firstAttribute="leading" secondItem="zbA-T8-BVQ" secondAttribute="leading" constant="20" type="default" id="QQE-FU-G41"/>
+                                            <constraint firstItem="oOe-WJ-jPU" firstAttribute="leading" secondItem="zbA-T8-BVQ" secondAttribute="leading" constant="116" id="hv1-vz-VII"/>
+                                            <constraint firstItem="oOe-WJ-jPU" firstAttribute="top" secondItem="zbA-T8-BVQ" secondAttribute="top" constant="13" id="qQy-2m-T5X"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="TYG-e7-Jnl" kind="push" identifier="GetFightAttending" id="f0G-6E-bXy"/>
+                                            <segue destination="TYG-e7-Jnl" kind="push" identifier="GetFightCreated" id="f0G-6E-bXy"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -155,6 +162,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="EU8-aF-7Ob"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="createdLabel" destination="oOe-WJ-jPU" id="Rn0-d4-rSB"/>
                         <outlet property="nameLabel" destination="XFP-Db-NoW" id="JiY-2A-N6Y"/>
                         <outlet property="organisedLabel" destination="JOU-4k-ziP" id="BhB-Iz-LhQ"/>
                     </connections>
@@ -178,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="2647" y="706"/>
         </scene>
-        <!--User Attending View Controller-->
+        <!--User Created View Controller-->
         <scene sceneID="OnX-jy-Y6y">
             <objects>
-                <tableViewController id="TYG-e7-Jnl" customClass="UserAttendingViewController" sceneMemberID="viewController">
+                <tableViewController id="TYG-e7-Jnl" customClass="UserCreatedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="R6T-bB-QYZ">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,8 +608,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="UserAttendingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserAttendingViewController.h"/>
+        <class className="UserCreatedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserCreatedViewController.h"/>
         </class>
         <class className="UserOrganisedViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserOrganisedViewController.h"/>
@@ -612,6 +620,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <class className="UserViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="createdLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="organisedLabel" candidateClass="UILabel"/>
             </relationships>

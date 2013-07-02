@@ -13,4 +13,5 @@
 @property (strong) NSManagedObject *fights;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *organisedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *createdLabel;
 @end

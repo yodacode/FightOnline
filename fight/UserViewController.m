@@ -9,6 +9,7 @@
 #import "UserViewController.h"
 #import "UserUpdateProfilViewController.h"
 #import "UserOrganisedViewController.h"
+#import "UserCreatedViewController.h"
 #import "User.h"
 #import "Fight.h"
 
@@ -75,6 +76,22 @@
         NSLog(@"\t\t%@ ", fight.name);
     }
     
+    
+    
+
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context]];
+    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"adminname like %@", [self.user valueForKey:@"name"]];
+    [request setPredicate:predicate2];
+    [request setIncludesSubentities:NO];
+    
+    NSError *err;
+    NSUInteger counterCreatedFight = [context countForFetchRequest:request error:&err];
+    self.createdLabel.text = [NSString stringWithFormat:@"%d,%@", counterCreatedFight, @" tapes"];
+    
+    
+    
     [self.tableView reloadData];
 }
 
@@ -101,6 +118,11 @@
     if ([[segue identifier] isEqualToString:@"GetFightOrganised"]) {
         NSManagedObject *selectedUser = self.user;
          UserOrganisedViewController *destViewController = segue.destinationViewController;
+        destViewController.user  = selectedUser;
+    }
+    if ([[segue identifier] isEqualToString:@"GetFightCreated"]) {
+        NSManagedObject *selectedUser = self.user;
+        UserCreatedViewController *destViewController = segue.destinationViewController;
         destViewController.user  = selectedUser;
     }
 

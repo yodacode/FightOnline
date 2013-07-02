@@ -1,21 +1,18 @@
 //
-//  UserOrganisedViewController.m
+//  UserCreatedViewController.m
 //  fight
 //
 //  Created by Benjamin on 02/07/13.
 //  Copyright (c) 2013 Benjamin. All rights reserved.
 //
 
-#import "UserOrganisedViewController.h"
+#import "UserCreatedViewController.h"
 #import "UserViewController.h"
-#import "User.h"
-#import "Fight.h"
-
-@interface UserOrganisedViewController ()
+@interface UserCreatedViewController ()
 @property (strong) NSMutableArray *fights;
 @end
 
-@implementation UserOrganisedViewController
+@implementation UserCreatedViewController
 @synthesize user;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,33 +34,19 @@
 {
     [super viewDidAppear:animated];
     
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
+    // Fetch the fights from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Fight" inManagedObjectContext:managedObjectContext];
     
     NSString * currentUserName = [self.user valueForKey:@"name"];
-    NSString * currentUserFirstName = [self.user valueForKey:@"firstname"];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", currentUserFirstName, currentUserName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"adminname like %@", currentUserName];
     [fetchRequest setEntity:entity];
     [fetchRequest setPredicate:predicate];
     
-    NSError *error = nil;
-    
-    id currentUser = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-    fetchRequest = nil;
-    self.user = currentUser;
-    
-    User * cuser = currentUser;
-    NSSet *tapes = cuser.fights;
-    NSMutableArray *mutArray=[[NSMutableArray alloc] init];
-    
-    for (Fight *fight in tapes) {
-        [mutArray addObject:fight];
-    }
-    self.fights = mutArray;
-    
+    self.fights = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     [self.tableView reloadData];
 }
 
@@ -106,6 +89,27 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete object from database
+        [context deleteObject:[self.fights objectAtIndex:indexPath.row]];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
+        // Remove device from table view
+        [self.fights removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -118,9 +122,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"GetFight"]) {
-        
+    
     }
 }
-
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UserAttendingViewController.h
+//  UserCreatedViewController.h
 //  fight
 //
 //  Created by Benjamin on 02/07/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserAttendingViewController : UITableViewController
-
+@interface UserCreatedViewController : UITableViewController
+@property (strong) NSManagedObject *user;
 @end
