@@ -32,9 +32,12 @@
 	// Do any additional setup after loading the view.
     if (self.fight) {
         [self.nameTextField setText:[self.fight valueForKey:@"name"]];
+        self.nameTextField.delegate = self;
         [self.addressTextField setText:[self.fight valueForKey:@"address"]];
+        self.addressTextField.delegate = self;
         NSString * fightersNumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
         [self.fighternumberTextField setText:fightersNumber];
+        self.fighternumberTextField.delegate = self;
     }
 }
 

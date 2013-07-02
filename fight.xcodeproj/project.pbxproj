@@ -175,10 +175,10 @@
 		58F6EEFB1781776900BC3B56 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */,
 				58F6F0C51782EB1E00BC3B56 /* UserCreatedViewController.h */,
 				58F6F0C61782EB1F00BC3B56 /* UserCreatedViewController.m */,
 				58F6F0BF1782CCD500BC3B56 /* UserOrganisedViewController.h */,
-				58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */,
 				58F6F0B917822C4700BC3B56 /* User.h */,
 				58F6F0BA17822C4800BC3B56 /* User.m */,
 				58F6EEF81781775C00BC3B56 /* UserViewController.h */,
