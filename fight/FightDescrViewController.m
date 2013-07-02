@@ -1,25 +1,25 @@
 //
-//  FightDescriptionViewController.m
+//  FightDescrViewController.m
 //  fight
 //
-//  Created by Benjamin on 19/06/13.
+//  Created by Benjamin on 02/07/13.
 //  Copyright (c) 2013 Benjamin. All rights reserved.
 //
 
-#import "FightDescriptionViewController.h"
+#import "FightDescrViewController.h"
 #import "FightDetailViewController.h"
 #import "FightLocationViewController.h"
 
-@interface FightDescriptionViewController ()
+@interface FightDescrViewController ()
+
 @end
 
-@implementation FightDescriptionViewController
+@implementation FightDescrViewController
 @synthesize fight;
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -29,7 +29,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
     if (self.fight) {
         self.labelName.text = [self.fight valueForKey:@"name"];
         self.labelAddress.text = [self.fight valueForKey:@"address"];
@@ -44,22 +49,16 @@
         self.labelDateFight.text = stringFromDate;
         
     }
-}
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self.tableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
     
-  //  UIButton *buttonThatWasPressed = (UIButton *)sender;
-//    buttonThatWasPressed.enabled = NO;
+    //  UIButton *buttonThatWasPressed = (UIButton *)sender;
+    //    buttonThatWasPressed.enabled = NO;
     
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;

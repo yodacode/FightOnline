@@ -1,20 +1,18 @@
 //
-//  FightDescriptionViewController.h
+//  FightDescrViewController.h
 //  fight
 //
-//  Created by Benjamin on 19/06/13.
+//  Created by Benjamin on 02/07/13.
 //  Copyright (c) 2013 Benjamin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FightDescriptionViewController : UIViewController
+@interface FightDescrViewController : UITableViewController
 @property (strong) NSManagedObject *fight;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelAddress;
-@property (weak, nonatomic) IBOutlet UILabel *labelFightersNumber;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateFight;
-@property (weak, nonatomic) IBOutlet UILabel *labelLongitude;
-@property (weak, nonatomic) IBOutlet UILabel *labelLatitude;
+@property (weak, nonatomic) IBOutlet UILabel *labelFightersNumber;
 
 @end

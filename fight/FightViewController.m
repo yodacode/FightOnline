@@ -7,7 +7,7 @@
 //
 
 #import "FightViewController.h"
-#import "FightDescriptionViewController.h"
+#import "FightDescrViewController.h"
 
 @interface FightViewController ()
 @property (strong) NSMutableArray *fights;
@@ -94,7 +94,7 @@
 {    
     if ([[segue identifier] isEqualToString:@"GetFight"]) {
         NSManagedObject *selectedFight = [self.fights objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
-        FightDescriptionViewController *destViewController = segue.destinationViewController;
+        FightDescrViewController *destViewController = segue.destinationViewController;
         destViewController.fight  = selectedFight;
     }
 }
