@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 
 @interface FightDescrViewController : UITableViewController
 @property (strong) NSManagedObject *fight;
 @property (strong) NSManagedObject *user;
+@property (strong) NSString *socialText;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelAddress;
 @property (weak, nonatomic) IBOutlet UILabel *labelDateFight;
@@ -20,6 +22,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonParticipate;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cellParticipate;
+- (IBAction)postFacebook:(id)sender;
+- (IBAction)postTwitter:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *labelDispo;
 @end

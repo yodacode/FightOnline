@@ -18,6 +18,7 @@
 
 @implementation FightDescrViewController
 @synthesize fight;
+@synthesize socialText;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,38 +38,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     if (self.fight) {
-        self.labelName.text = [self.fight valueForKey:@"name"];
-        self.labelAddress.text = [self.fight valueForKey:@"address"];
-        
-        NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
-        self.labelFightersNumber.text = fightersnumber;
-        
-        NSString *fightersattending = [NSString stringWithFormat:@"%@ %@", [self.fight valueForKey:@"fightersattending"],@"/"];
-        self.labelFightersAttending.text = fightersattending;
-        
-        NSDate *fightdate = [self.fight valueForKey:@"datefight"];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"dd/MM/yyyy"];
-        NSString *stringFromDate = [formatter stringFromDate:fightdate];
-        self.labelDateFight.text = stringFromDate;
-        
-        NSNumber *dispo = [self.fight valueForKey:@"fightersnumber"];
-        NSNumber *number = [self.fight valueForKey:@"fightersattending"];
-        int dispoValue = [dispo intValue];
-        int value = [number intValue];
-        
-        if(dispoValue == value){
-            self.labelDispo.textLabel.text = @"Complet";
-            self.labelDispo.textColor=[UIColor redColor];
-            self.cellParticipate.hidden = YES;
-        }
-
-        if([self isInfight]){
-            self.labelDispo.textLabel.text = @"Vous y participez";
-            self.labelDispo.textColor=[UIColor blueColor];
-            self.cellParticipate.hidden = YES;
-        }
-    
+        [self initRender];
     }
     
     [self.tableView reloadData];
@@ -76,7 +46,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     
     if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
         NSManagedObject *selectedFight = self.fight;
@@ -90,6 +59,7 @@
     }
 }
 
+
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -98,6 +68,8 @@
     }
     return context;
 }
+
+
 
 - (BOOL) isInfight {
     id currentFight = self.fight;
@@ -108,6 +80,44 @@
         return YES;
     } else {
         return NO;
+    }
+    
+}
+
+- (void)initRender {
+    
+    self.labelName.text = [self.fight valueForKey:@"name"];
+    self.labelAddress.text = [self.fight valueForKey:@"address"];
+    
+    NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
+    self.labelFightersNumber.text = fightersnumber;
+    
+    NSString *fightersattending = [NSString stringWithFormat:@"%@ %@", [self.fight valueForKey:@"fightersattending"],@"/"];
+    self.labelFightersAttending.text = fightersattending;
+    
+    NSDate *fightdate = [self.fight valueForKey:@"datefight"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    NSString *stringFromDate = [formatter stringFromDate:fightdate];
+    self.labelDateFight.text = stringFromDate;
+    
+    NSNumber *dispo = [self.fight valueForKey:@"fightersnumber"];
+    NSNumber *number = [self.fight valueForKey:@"fightersattending"];
+    int dispoValue = [dispo intValue];
+    int value = [number intValue];
+    
+    self.socialText = [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@ %@ %@ %@", self.labelName.text,@"\n Lieu:",self.labelAddress.text,@"\n Date :",self.labelDateFight.text,@"\n Participants :",self.labelFightersAttending.text,self.labelFightersNumber.text,@"\n"];
+    
+    if(dispoValue == value){
+        self.labelDispo.textLabel.text = @"Complet";
+        self.labelDispo.textColor=[UIColor redColor];
+        self.cellParticipate.hidden = YES;
+    }
+    
+    if([self isInfight]){
+        self.labelDispo.textLabel.text = @"Vous y participez";
+        self.labelDispo.textColor=[UIColor blueColor];
+        self.cellParticipate.hidden = YES;
     }
     
     
@@ -160,6 +170,26 @@
         [context save:&error];
 
         [self viewDidAppear:YES];
+    }
+}
+- (IBAction)postFacebook:(id)sender {
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [controller setInitialText:self.socialText];
+        [controller addURL:[NSURL URLWithString:@"https://github.com/yodacode/FightOnline"]];
+        [controller addImage:[UIImage imageNamed:@"racaille.jpg"]];
+        [self presentViewController:controller animated:YES completion:Nil];
+    }
+}
+
+- (IBAction)postTwitter:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetSheet = [SLComposeViewController
+                                               composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:self.socialText];
+        [tweetSheet addImage:[UIImage imageNamed:@"racaille.jpg"]];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
     }
 }
 @end
