@@ -71,7 +71,6 @@
 
 - (void)viewDidUnload
 {
-    
     [super viewDidUnload];
 }
 
@@ -147,10 +146,10 @@
 
 }
 
--(BOOL) textFieldShouldReturn:(UITextField *)textField{
-    
-    [textField resignFirstResponder];
-    return YES;
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    return NO;
 }
 
 
