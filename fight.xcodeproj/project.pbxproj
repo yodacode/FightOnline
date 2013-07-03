@@ -38,6 +38,7 @@
 		58F6F0D21783664600BC3B56 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F0CE1783664600BC3B56 /* icon_profile.png */; };
 		58F6F13A178434A400BC3B56 /* racaille.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F139178434A400BC3B56 /* racaille.jpg */; };
 		58F6F13C17843E1A00BC3B56 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F13B17843E1A00BC3B56 /* Social.framework */; };
+		58F6F13F17844FE100BC3B56 /* FightAttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F13E17844FE100BC3B56 /* FightAttendingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		58F6F0CE1783664600BC3B56 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
 		58F6F139178434A400BC3B56 /* racaille.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = racaille.jpg; sourceTree = "<group>"; };
 		58F6F13B17843E1A00BC3B56 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		58F6F13D17844FE000BC3B56 /* FightAttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightAttendingViewController.h; sourceTree = "<group>"; };
+		58F6F13E17844FE100BC3B56 /* FightAttendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightAttendingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 		58F6EEFC1781777B00BC3B56 /* Fight */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F13D17844FE000BC3B56 /* FightAttendingViewController.h */,
+				58F6F13E17844FE100BC3B56 /* FightAttendingViewController.m */,
 				58F6F0C81782F92B00BC3B56 /* FightDescrViewController.h */,
 				58F6F0C91782F92B00BC3B56 /* FightDescrViewController.m */,
 				58E9CA6D1778745400CDC9F8 /* Location.h */,
@@ -300,6 +305,7 @@
 				58F6F0C11782CCD700BC3B56 /* UserOrganisedViewController.m in Sources */,
 				58F6F0C71782EB2000BC3B56 /* UserCreatedViewController.m in Sources */,
 				58F6F0CA1782F92B00BC3B56 /* FightDescrViewController.m in Sources */,
+				58F6F13F17844FE100BC3B56 /* FightAttendingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

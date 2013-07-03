@@ -15,6 +15,7 @@
 @dynamic address;
 @dynamic datefight;
 @dynamic fightersnumber;
+@dynamic fightersattending;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic name;

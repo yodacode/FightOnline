@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSDate * datefight;
 @property (nonatomic, retain) NSNumber * fightersnumber;
+@property (nonatomic, retain) NSNumber * fightersattending;
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSString * name;

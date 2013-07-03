@@ -9,6 +9,7 @@
 #import "FightDescrViewController.h"
 #import "FightDetailViewController.h"
 #import "FightLocationViewController.h"
+#import "FightAttendingViewController.h"
 #import "User.h"
 #import "Fight.h"
 
@@ -19,6 +20,7 @@
 @implementation FightDescrViewController
 @synthesize fight;
 @synthesize socialText;
+@synthesize usersAttending;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,25 +41,13 @@
 {
     if (self.fight) {
         [self initRender];
+        
+        
     }
     
     [self.tableView reloadData];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
-        NSManagedObject *selectedFight = self.fight;
-        FightDetailViewController *destViewController = segue.destinationViewController;
-        destViewController.fight  = selectedFight;
-    }
-    if([[segue identifier] isEqualToString:@"GetMap"]) {
-        NSManagedObject *selectedFight = self.fight;
-        FightLocationViewController *destViewController = segue.destinationViewController;
-        destViewController.fight  = selectedFight;
-    }
-}
 
 
 - (NSManagedObjectContext *)managedObjectContext {
@@ -150,6 +140,7 @@
         [fetchRequest setPredicate:predicate];
         NSError *error0 = nil;
         id currentUser = [[context executeFetchRequest:fetchRequest error:&error0] lastObject];
+        //id currentUser = self.user;
         User * user2 = currentUser;
         
         NSEntityDescription *entity2 = [NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context];
@@ -158,6 +149,7 @@
         [fetchRequest setPredicate:predicate2];
         NSError *error2 = nil;
         id currentFight = [[context executeFetchRequest:fetchRequest error:&error2] lastObject];
+        //id currentFight = self.fight;
         Fight * fight2 = currentFight;
         
         // Set relationships
@@ -192,4 +184,35 @@
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"UpdateFight"]) {
+        NSManagedObject *selectedFight = self.fight;
+        FightDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.fight  = selectedFight;
+    }
+    if([[segue identifier] isEqualToString:@"GetMap"]) {
+        NSManagedObject *selectedFight = self.fight;
+        FightLocationViewController *destViewController = segue.destinationViewController;
+        destViewController.fight  = selectedFight;
+    }
+    if([[segue identifier] isEqualToString:@"GetFightAttending"]) {
+        id currentFight = self.fight;
+        Fight * thisFight = currentFight;
+        NSSet *users = thisFight.users;
+        
+        NSMutableArray *usersMutArray =[[NSMutableArray alloc] init];
+        for (User *user in users) {
+            [usersMutArray addObject:user];
+        }
+        
+        self.usersAttending = usersMutArray;
+        NSMutableArray *selectedUsers = self.usersAttending;
+        FightAttendingViewController *destViewController = segue.destinationViewController;
+        destViewController.users  = selectedUsers;
+    }
+}
+
 @end

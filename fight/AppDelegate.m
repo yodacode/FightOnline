@@ -35,8 +35,6 @@
     [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
     [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
     
-    
-    
     return YES;
 }
 
@@ -45,38 +43,64 @@
     // Grab the context
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    // Grab the User entity
+    //Create current user
     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
-    
-    // Set a User
     user.name = @"Nolimit";
     user.firstname = @"Fred";
     
-    // Insert the Fight entity
-    Fight *fight = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
-    fight.name = @"Hideout kikk";
-    fight.address = @"28 rue Troyon Sevres France";
+    //Create user2
+    User *user2 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    user2.name = @"Doe";
+    user2.firstname = @"John";
     
-    // Create a Date
+    //Create user2
+    User *user3 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    user3.name = @"Stienne";
+    user3.firstname = @"Edo";
+    
+    
+    // Create a Default date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/YYYY"];
     NSDate *dateFight = [dateFormatter dateFromString:@"04/11/2014"];
-    fight.datefight = dateFight;
     
-    NSNumber * fightersNumber = [NSNumber numberWithInteger:14];
+    //create default places
+    NSNumber * fightersNumber = [NSNumber numberWithInteger:15];
+    NSNumber * fighterAttending = [NSNumber numberWithInt:1];
+    NSNumber * fighterAttending2 = [NSNumber numberWithInt:2];
+    
+    //Create fight1
+    Fight *fight = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    fight.name = @"Street Baston";
+    fight.address = @"28 rue Troyon Sevres France";
+    fight.datefight = dateFight;
     fight.fightersnumber = fightersNumber;
+    fight.fightersattending = fighterAttending;
     
     //Create fight 2
     Fight *fight2 = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
-    fight2.name = @"Om fire";
+    fight2.name = @"PSG Fight";
     fight2.address = @"Trocadero Paris France";
+    fight2.datefight = dateFight;
+    fight2.fightersnumber = fightersNumber;
+    fight2.fightersattending = fighterAttending2;
+    
+    //Create fight 3
+    Fight *fight3 = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
+    fight3.name = @"La sanglante";
+    fight3.address = @"Chatelet les Halles Paris";
+    fight3.datefight = dateFight;
+    fight3.fightersnumber = fightersNumber;
+    fight3.fightersattending = fighterAttending2;
     
     // Set relationships
-    //[user addFightsObject:fight];
+//    [user addFightsObject:fight];
     //[fight addUsersObject:user];
     
     // Set relationships
-    [user addFights:[NSSet setWithObjects:fight, fight2, nil]];
+    [user addFights:[NSSet setWithObjects:fight, nil]];
+    [user2 addFights:[NSSet setWithObjects:fight2, fight3, nil]];
+    [user3 addFights:[NSSet setWithObjects:fight2, fight3, nil]];
     //[user addFights:[NSSet setWithObject:fight,fight2,nil]];
 
     
