@@ -12,12 +12,10 @@
 #import "User.h"
 #import "Fight.h"
 
-@interface UserOrganisedViewController ()
-@property (strong) NSMutableArray *fights;
-@end
 
 @implementation UserOrganisedViewController
 @synthesize user;
+@synthesize fights;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,33 +35,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    
-    NSString * currentUserName = [self.user valueForKey:@"name"];
-    NSString * currentUserFirstName = [self.user valueForKey:@"firstname"];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", currentUserFirstName, currentUserName];
-    [fetchRequest setEntity:entity];
-    [fetchRequest setPredicate:predicate];
-    
-    NSError *error = nil;
-    
-    id currentUser = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-    fetchRequest = nil;
-    self.user = currentUser;
-    
-    User * cuser = currentUser;
-    NSSet *tapes = cuser.fights;
-    NSMutableArray *mutArray=[[NSMutableArray alloc] init];
-    
-    for (Fight *fight in tapes) {
-        [mutArray addObject:fight];
-    }
-    self.fights = mutArray;
     
     [self.tableView reloadData];
 }

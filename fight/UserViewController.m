@@ -20,6 +20,8 @@
 @implementation UserViewController
 @synthesize user;
 @synthesize fights;
+@synthesize fightsAttending;
+@synthesize fightsCreated;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -47,13 +49,55 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewDidAppear:animated];    
     
+    [self initFightsAttendingForSegue];
+    [self initFightsCreatedForSegue];
+    
+    //init render
+    NSNumber * counterFightsAttending = [NSNumber numberWithInt:self.fightsAttending.count];
+    NSNumber * counterFightsCreated = [NSNumber numberWithInt:self.fightsCreated.count];
+    
+    self.organisedLabel.text = [NSString stringWithFormat:@"%@,%@", counterFightsAttending, @" tapes"];
+    self.createdLabel.text = [NSString stringWithFormat:@"%@,%@", counterFightsCreated, @" tapes"];
+    
+    self.nameLabel.text = [NSString stringWithFormat:@"%@,%@", [self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
+
+    
+    [self.tableView reloadData];
+}
+
+- (void)viewDidUnload
+{
+    
+    [super viewDidUnload];
+}
+
+- (void) initFightsCreatedForSegue {
     NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context]];
+    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"adminname like %@", [self.user valueForKey:@"name"]];
+    [request setPredicate:predicate2];
     
+    NSError *error = nil;
+    NSMutableArray *fightsMutArray =[[NSMutableArray alloc] init];
+
+    NSArray * tapes = [context executeFetchRequest:request error:&error];
+    for (NSArray *fight in tapes) {
+        [fightsMutArray addObject:fight];
+    }
+    
+    self.fightsCreated = fightsMutArray;
+
+    //self.createdLabel.text = [NSString stringWithFormat:@"%d,%@", counterCreatedFight, @" tapes"];
+}
+
+- (void) initFightsAttendingForSegue {
+
+    NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
     [fetchRequest setEntity:entity];
     [fetchRequest setPredicate:predicate];
@@ -66,39 +110,13 @@
     
     User * cuser = currentUser;
     NSSet *tapes = cuser.fights;
-    NSNumber * counterFight = [NSNumber numberWithInt:tapes.count];
     
-    //init render
-    self.organisedLabel.text = [NSString stringWithFormat:@"%@,%@", counterFight, @" tapes"];
-    self.nameLabel.text = [NSString stringWithFormat:@"%@,%@", [self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
     
+    NSMutableArray *fightsMutArray =[[NSMutableArray alloc] init];
     for (Fight *fight in tapes) {
-        NSLog(@"\t\t%@ ", fight.name);
+        [fightsMutArray addObject:fight];
     }
-    
-    
-    
-
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:[NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context]];
-    NSPredicate *predicate2 = [NSPredicate predicateWithFormat:@"adminname like %@", [self.user valueForKey:@"name"]];
-    [request setPredicate:predicate2];
-    [request setIncludesSubentities:NO];
-    
-    NSError *err;
-    NSUInteger counterCreatedFight = [context countForFetchRequest:request error:&err];
-    self.createdLabel.text = [NSString stringWithFormat:@"%d,%@", counterCreatedFight, @" tapes"];
-    
-    
-    
-    [self.tableView reloadData];
-}
-
-- (void)viewDidUnload
-{
-    
-    [super viewDidUnload];
+    self.fightsAttending = fightsMutArray;
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,14 +134,14 @@
         destViewController.user  = selectedUser;
     }
     if ([[segue identifier] isEqualToString:@"GetFightOrganised"]) {
-        NSManagedObject *selectedUser = self.user;
+        NSMutableArray *selectedFights = self.fightsAttending;
          UserOrganisedViewController *destViewController = segue.destinationViewController;
-        destViewController.user  = selectedUser;
+        destViewController.fights  = selectedFights;
     }
     if ([[segue identifier] isEqualToString:@"GetFightCreated"]) {
-        NSManagedObject *selectedUser = self.user;
+        NSMutableArray *selectedFights = self.fightsCreated;
         UserCreatedViewController *destViewController = segue.destinationViewController;
-        destViewController.user  = selectedUser;
+        destViewController.fights  = selectedFights;
     }
 
 }

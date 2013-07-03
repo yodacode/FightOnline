@@ -10,4 +10,5 @@
 
 @interface UserCreatedViewController : UITableViewController
 @property (strong) NSManagedObject *user;
+@property (strong) NSMutableArray *fights;
 @end

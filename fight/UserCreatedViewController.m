@@ -9,12 +9,10 @@
 #import "UserCreatedViewController.h"
 #import "UserViewController.h"
 #import "FightDescrViewController.h"
-@interface UserCreatedViewController ()
-@property (strong) NSMutableArray *fights;
-@end
 
 @implementation UserCreatedViewController
 @synthesize user;
+@synthesize fights;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,20 +32,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    // Fetch the fights from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Fight" inManagedObjectContext:managedObjectContext];
-    
-    NSString * currentUserName = [self.user valueForKey:@"name"];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"adminname like %@", currentUserName];
-    [fetchRequest setEntity:entity];
-    [fetchRequest setPredicate:predicate];
-    
-    self.fights = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     [self.tableView reloadData];
 }
 
