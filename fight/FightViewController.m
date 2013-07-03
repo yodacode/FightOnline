@@ -69,6 +69,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -76,9 +77,12 @@
     NSManagedObject *fight = [self.fights objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [fight valueForKey:@"name"]]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@", @"(",[fight valueForKey:@"fightersattending"], @"/", [fight valueForKey:@"fightersnumber"], @")", [fight valueForKey:@"address"]]];
+    cell.imageView.image = [UIImage imageNamed:@"fight.jpg"];
     
     return cell;
 }
+
+
 
 
 

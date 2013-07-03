@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FightViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 
 @end

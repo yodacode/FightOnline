@@ -72,7 +72,7 @@
     NSManagedObject *user = [self.users objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [user valueForKey:@"name"]]];
     [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@",[user valueForKey:@"firstname"]]];
-    
+    cell.imageView.image = [UIImage imageNamed:@"profil.jpg"];
     return cell;
 }
 

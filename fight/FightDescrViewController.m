@@ -169,7 +169,7 @@
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [controller setInitialText:self.socialText];
         [controller addURL:[NSURL URLWithString:@"https://github.com/yodacode/FightOnline"]];
-        [controller addImage:[UIImage imageNamed:@"racaille.jpg"]];
+        [controller addImage:[UIImage imageNamed:@"fight.jpg"]];
         [self presentViewController:controller animated:YES completion:Nil];
     }
 }
@@ -180,7 +180,7 @@
         SLComposeViewController *tweetSheet = [SLComposeViewController
                                                composeViewControllerForServiceType:SLServiceTypeTwitter];
         [tweetSheet setInitialText:self.socialText];
-        [tweetSheet addImage:[UIImage imageNamed:@"racaille.jpg"]];
+        [tweetSheet addImage:[UIImage imageNamed:@"fight.jpg"]];
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
 }
