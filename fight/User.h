@@ -15,6 +15,8 @@
 
 @property (nonatomic, retain) NSString * firstname;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * age;
+@property (nonatomic, retain) NSString * profildescr;
 @property (nonatomic, retain) NSSet *fights;
 @end
 

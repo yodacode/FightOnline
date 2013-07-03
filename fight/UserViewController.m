@@ -62,7 +62,9 @@
     self.createdLabel.text = [NSString stringWithFormat:@"%@,%@", counterFightsCreated, @" tapes"];
     
     self.nameLabel.text = [NSString stringWithFormat:@"%@,%@", [self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
-
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"age"]];
+    self.descriptionLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"profildescr"]];
+    self.descriptionLabel.delegate = self;
     
     [self.tableView reloadData];
 }
@@ -90,7 +92,6 @@
     
     self.fightsCreated = fightsMutArray;
 
-    //self.createdLabel.text = [NSString stringWithFormat:@"%d,%@", counterCreatedFight, @" tapes"];
 }
 
 - (void) initFightsAttendingForSegue {
@@ -144,6 +145,12 @@
         destViewController.fights  = selectedFights;
     }
 
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 

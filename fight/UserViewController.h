@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserViewController : UITableViewController
+@interface UserViewController : UITableViewController<UITextFieldDelegate>
 @property (strong) NSManagedObject *user;
 @property (strong) NSManagedObject *fights;
 @property (strong) NSMutableArray *fightsAttending;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 @property (strong) NSMutableArray *fightsCreated;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *organisedLabel;

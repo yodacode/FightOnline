@@ -14,6 +14,8 @@
 
 @dynamic firstname;
 @dynamic name;
+@dynamic age;
+@dynamic profildescr;
 @dynamic fights;
 
 @end

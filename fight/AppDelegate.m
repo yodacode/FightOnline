@@ -47,16 +47,20 @@
     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     user.name = @"Nolimit";
     user.firstname = @"Fred";
+    user.age = [NSNumber numberWithInteger:23];
+    user.profildescr = @"Initialement connu sous le nom de Cassius Clay, il change son nom en Mohamed Ali à l'âge de 22 ans après avoir rejoint la Nation of Islam en 1964 et se convertit par la suite à l'islam sunnite en 1975. En 1967, trois ans après avoir remporté le championnat des poids lourds, il a été publiquement vilipendé pour son refus d'être enrôlé dans l'armée américaine par opposition à la guerre du Vietnam et par croyances idéologiques";
     
     //Create user2
     User *user2 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     user2.name = @"Doe";
     user2.firstname = @"John";
+    user2.age = [NSNumber numberWithInteger:32];
     
     //Create user2
     User *user3 = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     user3.name = @"Stienne";
     user3.firstname = @"Edo";
+    user3.age = [NSNumber numberWithInteger:18];
     
     
     // Create a Default date
@@ -94,7 +98,7 @@
     fight3.fightersattending = fighterAttending2;
     
     // Set relationships
-//    [user addFightsObject:fight];
+    //[user addFightsObject:fight];
     //[fight addUsersObject:user];
     
     // Set relationships
