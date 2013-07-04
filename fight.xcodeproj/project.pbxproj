@@ -140,10 +140,6 @@
 		58974811177090B800FE6C21 = {
 			isa = PBXGroup;
 			children = (
-				58F6F15817859BE800BC3B56 /* Security.framework */,
-				58F6F15617859BD500BC3B56 /* libsqlite3.dylib */,
-				58F6F15417859BAE00BC3B56 /* AdSupport.framework */,
-				58F6F15217859B9900BC3B56 /* Accounts.framework */,
 				58E9CA6917783CDB00CDC9F8 /* img */,
 				58974825177090B800FE6C21 /* fight */,
 				5897481C177090B800FE6C21 /* Frameworks */,
@@ -162,6 +158,10 @@
 		5897481C177090B800FE6C21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F15817859BE800BC3B56 /* Security.framework */,
+				58F6F15617859BD500BC3B56 /* libsqlite3.dylib */,
+				58F6F15417859BAE00BC3B56 /* AdSupport.framework */,
+				58F6F15217859B9900BC3B56 /* Accounts.framework */,
 				58F6F15017859B7400BC3B56 /* FacebookSDKResources.bundle */,
 				58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */,
 				58F6F13B17843E1A00BC3B56 /* Social.framework */,
