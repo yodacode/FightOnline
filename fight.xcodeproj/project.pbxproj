@@ -44,6 +44,7 @@
 		58F6F149178480F300BC3B56 /* racaille-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F148178480F200BC3B56 /* racaille-retina.png */; };
 		58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */; };
 		58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14C1784831B00BC3B56 /* profil.jpg */; };
+		58F6F14F17859AE100BC3B56 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		58F6F148178480F200BC3B56 /* racaille-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-retina.png"; sourceTree = "<group>"; };
 		58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-ipad-retina.png"; sourceTree = "<group>"; };
 		58F6F14C1784831B00BC3B56 /* profil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profil.jpg; sourceTree = "<group>"; };
+		58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				58974820177090B800FE6C21 /* Foundation.framework in Frameworks */,
 				58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */,
 				58974824177090B800FE6C21 /* CoreData.framework in Frameworks */,
+				58F6F14F17859AE100BC3B56 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +144,7 @@
 		5897481C177090B800FE6C21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */,
 				58F6F13B17843E1A00BC3B56 /* Social.framework */,
 				58E9CA70177986A200CDC9F8 /* CoreLocation.framework */,
 				58E9CA6717783CAB00CDC9F8 /* MapKit.framework */,
@@ -404,6 +408,10 @@
 		5897483D177090B800FE6C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";
@@ -415,6 +423,10 @@
 		5897483E177090B800FE6C21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fight/fight-Prefix.pch";
 				INFOPLIST_FILE = "fight/fight-Info.plist";
