@@ -45,6 +45,11 @@
 		58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */; };
 		58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14C1784831B00BC3B56 /* profil.jpg */; };
 		58F6F14F17859AE100BC3B56 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */; };
+		58F6F15117859B7400BC3B56 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F15017859B7400BC3B56 /* FacebookSDKResources.bundle */; };
+		58F6F15317859B9900BC3B56 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F15217859B9900BC3B56 /* Accounts.framework */; };
+		58F6F15517859BAE00BC3B56 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F15417859BAE00BC3B56 /* AdSupport.framework */; };
+		58F6F15717859BD500BC3B56 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F15617859BD500BC3B56 /* libsqlite3.dylib */; };
+		58F6F15917859BE800BC3B56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F15817859BE800BC3B56 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +107,11 @@
 		58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-ipad-retina.png"; sourceTree = "<group>"; };
 		58F6F14C1784831B00BC3B56 /* profil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profil.jpg; sourceTree = "<group>"; };
 		58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		58F6F15017859B7400BC3B56 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		58F6F15217859B9900BC3B56 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		58F6F15417859BAE00BC3B56 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		58F6F15617859BD500BC3B56 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		58F6F15817859BE800BC3B56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F6F15917859BE800BC3B56 /* Security.framework in Frameworks */,
+				58F6F15717859BD500BC3B56 /* libsqlite3.dylib in Frameworks */,
+				58F6F15517859BAE00BC3B56 /* AdSupport.framework in Frameworks */,
+				58F6F15317859B9900BC3B56 /* Accounts.framework in Frameworks */,
 				58F6F13C17843E1A00BC3B56 /* Social.framework in Frameworks */,
 				58E9CA71177986A200CDC9F8 /* CoreLocation.framework in Frameworks */,
 				58E9CA6817783CAB00CDC9F8 /* MapKit.framework in Frameworks */,
@@ -126,6 +140,10 @@
 		58974811177090B800FE6C21 = {
 			isa = PBXGroup;
 			children = (
+				58F6F15817859BE800BC3B56 /* Security.framework */,
+				58F6F15617859BD500BC3B56 /* libsqlite3.dylib */,
+				58F6F15417859BAE00BC3B56 /* AdSupport.framework */,
+				58F6F15217859B9900BC3B56 /* Accounts.framework */,
 				58E9CA6917783CDB00CDC9F8 /* img */,
 				58974825177090B800FE6C21 /* fight */,
 				5897481C177090B800FE6C21 /* Frameworks */,
@@ -144,6 +162,7 @@
 		5897481C177090B800FE6C21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58F6F15017859B7400BC3B56 /* FacebookSDKResources.bundle */,
 				58F6F14E17859AE100BC3B56 /* FacebookSDK.framework */,
 				58F6F13B17843E1A00BC3B56 /* Social.framework */,
 				58E9CA70177986A200CDC9F8 /* CoreLocation.framework */,
@@ -305,6 +324,7 @@
 				58F6F149178480F300BC3B56 /* racaille-retina.png in Resources */,
 				58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */,
 				58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */,
+				58F6F15117859B7400BC3B56 /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
