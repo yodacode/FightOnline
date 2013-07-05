@@ -9,10 +9,10 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
-
 @end
 
 @implementation HomeViewController
+@synthesize isLoged;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,12 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.tabBarController.tabBar.hidden = YES;
+    if(self.isLoged){
+        self.tabBarController.tabBar.hidden = NO;
+    } else {
+        self.tabBarController.tabBar.hidden = YES;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +46,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)loginButton:(id)sender {
     
@@ -50,7 +56,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
     [request setEntity:entityDesc];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name like %@ and password like %@", self.loginTextField.text, self.passwordTextField.text];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"email like %@ and password like %@", self.loginTextField.text, self.passwordTextField.text];
     [request setPredicate:predicate];
     
     NSError *error;
@@ -63,7 +69,9 @@
     }else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion" message:@"C GOOD" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-//        [self performSegueWithIdentifier:@"figths" sender:self];
+        //[self performSegueWithIdentifier:@"figths" sender:self];
+        self.isLoged = YES;
+        self.tabBarController.tabBar.hidden = NO;
     }
     
 }
@@ -82,4 +90,6 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     return [textField resignFirstResponder];
 }
+
+
 @end
