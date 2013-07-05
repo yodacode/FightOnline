@@ -938,34 +938,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <constraint firstAttribute="height" constant="186" id="FT3-g4-fEh"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tu veux te Battre ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbt-n6-EFm">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="zgl-Uq-uPm"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tape en ligne est la pour t'aider !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-CK-2in">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="IeI-VJ-hYs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Dbt-n6-EFm" secondAttribute="trailing" constant="19" id="6fk-sP-Pez"/>
-                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="trailing" secondItem="Kgg-CK-2in" secondAttribute="trailing" type="default" id="79p-Va-ASO"/>
+                                    <constraint firstAttribute="trailing" secondItem="uko-aW-pjf" secondAttribute="trailing" constant="129" id="1Ms-8U-2ZO"/>
                                     <constraint firstItem="uko-aW-pjf" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="-6" id="DYZ-aG-07u"/>
-                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" constant="212" id="DkB-E0-mJu"/>
-                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Dmq-aZ-VtM"/>
-                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="centerX" secondItem="OOQ-aZ-0au" secondAttribute="centerX" type="default" id="PBu-2V-rgs"/>
                                     <constraint firstItem="uko-aW-pjf" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" type="default" id="WZe-ks-hbe"/>
-                                    <constraint firstItem="Kgg-CK-2in" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XtI-kX-4cN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kgg-CK-2in" secondAttribute="bottom" constant="237" id="knV-Xd-vee"/>
-                                    <constraint firstItem="Kgg-CK-2in" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" constant="238" id="ytL-fx-ffT"/>
+                                    <constraint firstAttribute="bottom" secondItem="uko-aW-pjf" secondAttribute="bottom" constant="313" id="hqK-bh-qYD"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
