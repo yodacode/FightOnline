@@ -101,10 +101,7 @@
     
     self.labelAdminName.text = [self.fight valueForKey:@"adminname"];
     
-    NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
-    self.labelFightersNumber.text = fightersnumber;
-    
-    NSString *fightersattending = [NSString stringWithFormat:@"%@ %@", [self.fight valueForKey:@"fightersattending"],@"/"];
+    NSString *fightersattending = [NSString stringWithFormat:@"%@ %@ %@", [self.fight valueForKey:@"fightersattending"],@"/", [self.fight valueForKey:@"fightersnumber"]];
     self.labelFightersAttending.text = fightersattending;
     
     NSDate *fightdate = [self.fight valueForKey:@"datefight"];

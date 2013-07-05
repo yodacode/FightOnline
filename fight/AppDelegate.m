@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self create];
+   // [self create];
     [self read];
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
@@ -28,12 +28,15 @@
 
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
 
-    tabBarItem2.title = @"Fight";
-    tabBarItem1.title = @"Profil";
+    tabBarItem3.title = @"Fight";
+    tabBarItem2.title = @"Profil";
+    tabBarItem1.title = @"Accueil";
     
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
-    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
     
     return YES;
 }
