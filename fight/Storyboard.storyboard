@@ -929,7 +929,53 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <view key="view" contentMode="scaleToFill" id="hqr-3A-d1c">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOQ-aZ-0au">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg-home.png" translatesAutoresizingMaskIntoConstraints="NO" id="uko-aW-pjf">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="197" id="3mU-6P-tbp"/>
+                                            <constraint firstAttribute="height" constant="186" id="FT3-g4-fEh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tu veux te Battre ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbt-n6-EFm">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="zgl-Uq-uPm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tape en ligne est la pour t'aider !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgg-CK-2in">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="IeI-VJ-hYs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Dbt-n6-EFm" secondAttribute="trailing" constant="19" id="6fk-sP-Pez"/>
+                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="trailing" secondItem="Kgg-CK-2in" secondAttribute="trailing" type="default" id="79p-Va-ASO"/>
+                                    <constraint firstItem="uko-aW-pjf" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="-6" id="DYZ-aG-07u"/>
+                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" constant="212" id="DkB-E0-mJu"/>
+                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Dmq-aZ-VtM"/>
+                                    <constraint firstItem="Dbt-n6-EFm" firstAttribute="centerX" secondItem="OOQ-aZ-0au" secondAttribute="centerX" type="default" id="PBu-2V-rgs"/>
+                                    <constraint firstItem="uko-aW-pjf" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" type="default" id="WZe-ks-hbe"/>
+                                    <constraint firstItem="Kgg-CK-2in" firstAttribute="leading" secondItem="OOQ-aZ-0au" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XtI-kX-4cN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kgg-CK-2in" secondAttribute="bottom" constant="237" id="knV-Xd-vee"/>
+                                    <constraint firstItem="Kgg-CK-2in" firstAttribute="top" secondItem="OOQ-aZ-0au" secondAttribute="top" constant="238" id="ytL-fx-ffT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OOQ-aZ-0au" firstAttribute="top" secondItem="hqr-3A-d1c" secondAttribute="top" type="default" id="Zgu-v8-hF2"/>
+                            <constraint firstItem="OOQ-aZ-0au" firstAttribute="bottom" secondItem="hqr-3A-d1c" secondAttribute="bottom" type="default" id="dy0-lh-6b9"/>
+                            <constraint firstItem="OOQ-aZ-0au" firstAttribute="trailing" secondItem="hqr-3A-d1c" secondAttribute="trailing" type="default" id="h89-sb-NyK"/>
+                            <constraint firstItem="OOQ-aZ-0au" firstAttribute="leading" secondItem="hqr-3A-d1c" secondAttribute="leading" type="default" id="id0-Kb-c9i"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accueil" id="h8c-kb-Rrb"/>
                 </viewController>
@@ -940,6 +986,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Default@2x.png" width="640" height="960"/>
+        <image name="bg-home.png" width="262" height="198"/>
         <image name="fight.jpg" width="87" height="87"/>
         <image name="icon-facebook.png" width="57" height="57"/>
         <image name="icon-twitter.png" width="57" height="57"/>
