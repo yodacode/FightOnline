@@ -24,6 +24,7 @@
 		586B9CE217871BB400C03F1C /* home_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE017871BB400C03F1C /* home_active.png */; };
 		586B9CE317871BB400C03F1C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE117871BB400C03F1C /* home.png */; };
 		586B9CE517871D2E00C03F1C /* bg-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE417871D2E00C03F1C /* bg-home.png */; };
+		586B9CE81787556D00C03F1C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 586B9CE71787556D00C03F1C /* HomeViewController.m */; };
 		5897481E177090B800FE6C21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481D177090B800FE6C21 /* UIKit.framework */; };
 		58974820177090B800FE6C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481F177090B800FE6C21 /* Foundation.framework */; };
 		58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58974821177090B800FE6C21 /* CoreGraphics.framework */; };
@@ -71,6 +72,8 @@
 		586B9CE017871BB400C03F1C /* home_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_active.png; path = img/home_active.png; sourceTree = "<group>"; };
 		586B9CE117871BB400C03F1C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = img/home.png; sourceTree = "<group>"; };
 		586B9CE417871D2E00C03F1C /* bg-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-home.png"; path = "img/bg-home.png"; sourceTree = "<group>"; };
+		586B9CE61787556D00C03F1C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		586B9CE71787556D00C03F1C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5897481A177090B800FE6C21 /* fight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5897481D177090B800FE6C21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5897481F177090B800FE6C21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,6 +178,8 @@
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
 				5897483F177091D400FE6C21 /* Storyboard.storyboard */,
+				586B9CE61787556D00C03F1C /* HomeViewController.h */,
+				586B9CE71787556D00C03F1C /* HomeViewController.m */,
 				58974826177090B800FE6C21 /* Supporting Files */,
 			);
 			path = fight;
@@ -354,6 +359,7 @@
 				58F6F0C71782EB2000BC3B56 /* UserCreatedViewController.m in Sources */,
 				58F6F0CA1782F92B00BC3B56 /* FightDescrViewController.m in Sources */,
 				58F6F13F17844FE100BC3B56 /* FightAttendingViewController.m in Sources */,
+				586B9CE81787556D00C03F1C /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

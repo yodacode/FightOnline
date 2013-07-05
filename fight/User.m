@@ -15,6 +15,8 @@
 @dynamic firstname;
 @dynamic name;
 @dynamic age;
+@dynamic password;
+@dynamic email;
 @dynamic profildescr;
 @dynamic fights;
 
