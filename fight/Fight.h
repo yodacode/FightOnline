@@ -14,6 +14,7 @@
 @interface Fight : NSManagedObject
 
 @property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * adminname;
 @property (nonatomic, retain) NSDate * datefight;
 @property (nonatomic, retain) NSNumber * fightersnumber;
 @property (nonatomic, retain) NSNumber * fightersattending;

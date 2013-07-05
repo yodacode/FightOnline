@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		586B9CD017870CA400C03F1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC417870CA400C03F1C /* Default.png */; };
+		586B9CD117870CA400C03F1C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC517870CA400C03F1C /* Default@2x.png */; };
+		586B9CD217870CA400C03F1C /* fight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC617870CA400C03F1C /* fight.jpg */; };
+		586B9CD317870CA400C03F1C /* icon_gun_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC717870CA400C03F1C /* icon_gun_active.png */; };
+		586B9CD417870CA400C03F1C /* icon_gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC817870CA400C03F1C /* icon_gun.png */; };
+		586B9CD517870CA400C03F1C /* icon_profile_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC917870CA400C03F1C /* icon_profile_active.png */; };
+		586B9CD617870CA400C03F1C /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCA17870CA400C03F1C /* icon_profile.png */; };
+		586B9CD717870CA400C03F1C /* profil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCB17870CA400C03F1C /* profil.jpg */; };
+		586B9CD817870CA400C03F1C /* racaille-ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCC17870CA400C03F1C /* racaille-ipad-retina.png */; };
+		586B9CD917870CA400C03F1C /* racaille-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCD17870CA400C03F1C /* racaille-ipad.png */; };
+		586B9CDA17870CA400C03F1C /* racaille-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCE17870CA400C03F1C /* racaille-retina.png */; };
+		586B9CDB17870CA400C03F1C /* racaille.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CCF17870CA400C03F1C /* racaille.png */; };
+		586B9CDD17870CEF00C03F1C /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CDC17870CEF00C03F1C /* icon-facebook.png */; };
+		586B9CDF17870DE300C03F1C /* icon-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CDE17870DE300C03F1C /* icon-twitter.png */; };
+		586B9CE217871BB400C03F1C /* home_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE017871BB400C03F1C /* home_active.png */; };
+		586B9CE317871BB400C03F1C /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE117871BB400C03F1C /* home.png */; };
+		586B9CE517871D2E00C03F1C /* bg-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CE417871D2E00C03F1C /* bg-home.png */; };
 		5897481E177090B800FE6C21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481D177090B800FE6C21 /* UIKit.framework */; };
 		58974820177090B800FE6C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481F177090B800FE6C21 /* Foundation.framework */; };
 		58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58974821177090B800FE6C21 /* CoreGraphics.framework */; };
@@ -32,21 +49,28 @@
 		58F6F0C11782CCD700BC3B56 /* UserOrganisedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0C01782CCD600BC3B56 /* UserOrganisedViewController.m */; };
 		58F6F0C71782EB2000BC3B56 /* UserCreatedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0C61782EB1F00BC3B56 /* UserCreatedViewController.m */; };
 		58F6F0CA1782F92B00BC3B56 /* FightDescrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F0C91782F92B00BC3B56 /* FightDescrViewController.m */; };
-		58F6F0CF1783664600BC3B56 /* icon_gun_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F0CB1783664600BC3B56 /* icon_gun_active.png */; };
-		58F6F0D01783664600BC3B56 /* icon_gun.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F0CC1783664600BC3B56 /* icon_gun.png */; };
-		58F6F0D11783664600BC3B56 /* icon_profile_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F0CD1783664600BC3B56 /* icon_profile_active.png */; };
-		58F6F0D21783664600BC3B56 /* icon_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F0CE1783664600BC3B56 /* icon_profile.png */; };
 		58F6F13C17843E1A00BC3B56 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F6F13B17843E1A00BC3B56 /* Social.framework */; };
 		58F6F13F17844FE100BC3B56 /* FightAttendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F6F13E17844FE100BC3B56 /* FightAttendingViewController.m */; };
-		58F6F14317847C8200BC3B56 /* fight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14217847C8200BC3B56 /* fight.jpg */; };
-		58F6F14517847F7200BC3B56 /* racaille.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14417847F7200BC3B56 /* racaille.png */; };
-		58F6F1471784809C00BC3B56 /* racaille-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F1461784809C00BC3B56 /* racaille-ipad.png */; };
-		58F6F149178480F300BC3B56 /* racaille-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F148178480F200BC3B56 /* racaille-retina.png */; };
-		58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */; };
-		58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58F6F14C1784831B00BC3B56 /* profil.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		586B9CC417870CA400C03F1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = img/Default.png; sourceTree = "<group>"; };
+		586B9CC517870CA400C03F1C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "img/Default@2x.png"; sourceTree = "<group>"; };
+		586B9CC617870CA400C03F1C /* fight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fight.jpg; path = img/fight.jpg; sourceTree = "<group>"; };
+		586B9CC717870CA400C03F1C /* icon_gun_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun_active.png; path = img/icon_gun_active.png; sourceTree = "<group>"; };
+		586B9CC817870CA400C03F1C /* icon_gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gun.png; path = img/icon_gun.png; sourceTree = "<group>"; };
+		586B9CC917870CA400C03F1C /* icon_profile_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile_active.png; path = img/icon_profile_active.png; sourceTree = "<group>"; };
+		586B9CCA17870CA400C03F1C /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_profile.png; path = img/icon_profile.png; sourceTree = "<group>"; };
+		586B9CCB17870CA400C03F1C /* profil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profil.jpg; path = img/profil.jpg; sourceTree = "<group>"; };
+		586B9CCC17870CA400C03F1C /* racaille-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "racaille-ipad-retina.png"; path = "img/racaille-ipad-retina.png"; sourceTree = "<group>"; };
+		586B9CCD17870CA400C03F1C /* racaille-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "racaille-ipad.png"; path = "img/racaille-ipad.png"; sourceTree = "<group>"; };
+		586B9CCE17870CA400C03F1C /* racaille-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "racaille-retina.png"; path = "img/racaille-retina.png"; sourceTree = "<group>"; };
+		586B9CCF17870CA400C03F1C /* racaille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = racaille.png; path = img/racaille.png; sourceTree = "<group>"; };
+		586B9CDC17870CEF00C03F1C /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "img/icon-facebook.png"; sourceTree = "<group>"; };
+		586B9CDE17870DE300C03F1C /* icon-twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-twitter.png"; path = "img/icon-twitter.png"; sourceTree = "<group>"; };
+		586B9CE017871BB400C03F1C /* home_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_active.png; path = img/home_active.png; sourceTree = "<group>"; };
+		586B9CE117871BB400C03F1C /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = img/home.png; sourceTree = "<group>"; };
+		586B9CE417871D2E00C03F1C /* bg-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-home.png"; path = "img/bg-home.png"; sourceTree = "<group>"; };
 		5897481A177090B800FE6C21 /* fight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5897481D177090B800FE6C21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5897481F177090B800FE6C21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,19 +111,9 @@
 		58F6F0C61782EB1F00BC3B56 /* UserCreatedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCreatedViewController.m; sourceTree = "<group>"; };
 		58F6F0C81782F92B00BC3B56 /* FightDescrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightDescrViewController.h; sourceTree = "<group>"; };
 		58F6F0C91782F92B00BC3B56 /* FightDescrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightDescrViewController.m; sourceTree = "<group>"; };
-		58F6F0CB1783664600BC3B56 /* icon_gun_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_gun_active.png; sourceTree = "<group>"; };
-		58F6F0CC1783664600BC3B56 /* icon_gun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_gun.png; sourceTree = "<group>"; };
-		58F6F0CD1783664600BC3B56 /* icon_profile_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile_active.png; sourceTree = "<group>"; };
-		58F6F0CE1783664600BC3B56 /* icon_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile.png; sourceTree = "<group>"; };
 		58F6F13B17843E1A00BC3B56 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		58F6F13D17844FE000BC3B56 /* FightAttendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightAttendingViewController.h; sourceTree = "<group>"; };
 		58F6F13E17844FE100BC3B56 /* FightAttendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightAttendingViewController.m; sourceTree = "<group>"; };
-		58F6F14217847C8200BC3B56 /* fight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fight.jpg; sourceTree = "<group>"; };
-		58F6F14417847F7200BC3B56 /* racaille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = racaille.png; sourceTree = "<group>"; };
-		58F6F1461784809C00BC3B56 /* racaille-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-ipad.png"; sourceTree = "<group>"; };
-		58F6F148178480F200BC3B56 /* racaille-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-retina.png"; sourceTree = "<group>"; };
-		58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "racaille-ipad-retina.png"; sourceTree = "<group>"; };
-		58F6F14C1784831B00BC3B56 /* profil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profil.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,16 +197,23 @@
 		58E9CA6917783CDB00CDC9F8 /* img */ = {
 			isa = PBXGroup;
 			children = (
-				58F6F14A1784813B00BC3B56 /* racaille-ipad-retina.png */,
-				58F6F148178480F200BC3B56 /* racaille-retina.png */,
-				58F6F1461784809C00BC3B56 /* racaille-ipad.png */,
-				58F6F14417847F7200BC3B56 /* racaille.png */,
-				58F6F14C1784831B00BC3B56 /* profil.jpg */,
-				58F6F14217847C8200BC3B56 /* fight.jpg */,
-				58F6F0CB1783664600BC3B56 /* icon_gun_active.png */,
-				58F6F0CC1783664600BC3B56 /* icon_gun.png */,
-				58F6F0CD1783664600BC3B56 /* icon_profile_active.png */,
-				58F6F0CE1783664600BC3B56 /* icon_profile.png */,
+				586B9CE417871D2E00C03F1C /* bg-home.png */,
+				586B9CE017871BB400C03F1C /* home_active.png */,
+				586B9CE117871BB400C03F1C /* home.png */,
+				586B9CDE17870DE300C03F1C /* icon-twitter.png */,
+				586B9CDC17870CEF00C03F1C /* icon-facebook.png */,
+				586B9CC417870CA400C03F1C /* Default.png */,
+				586B9CC517870CA400C03F1C /* Default@2x.png */,
+				586B9CC617870CA400C03F1C /* fight.jpg */,
+				586B9CC717870CA400C03F1C /* icon_gun_active.png */,
+				586B9CC817870CA400C03F1C /* icon_gun.png */,
+				586B9CC917870CA400C03F1C /* icon_profile_active.png */,
+				586B9CCA17870CA400C03F1C /* icon_profile.png */,
+				586B9CCB17870CA400C03F1C /* profil.jpg */,
+				586B9CCC17870CA400C03F1C /* racaille-ipad-retina.png */,
+				586B9CCD17870CA400C03F1C /* racaille-ipad.png */,
+				586B9CCE17870CA400C03F1C /* racaille-retina.png */,
+				586B9CCF17870CA400C03F1C /* racaille.png */,
 			);
 			name = img;
 			sourceTree = "<group>";
@@ -291,16 +312,23 @@
 				58974834177090B800FE6C21 /* Default@2x.png in Resources */,
 				58974836177090B800FE6C21 /* Default-568h@2x.png in Resources */,
 				58974840177091D400FE6C21 /* Storyboard.storyboard in Resources */,
-				58F6F0CF1783664600BC3B56 /* icon_gun_active.png in Resources */,
-				58F6F0D01783664600BC3B56 /* icon_gun.png in Resources */,
-				58F6F0D11783664600BC3B56 /* icon_profile_active.png in Resources */,
-				58F6F0D21783664600BC3B56 /* icon_profile.png in Resources */,
-				58F6F14317847C8200BC3B56 /* fight.jpg in Resources */,
-				58F6F14517847F7200BC3B56 /* racaille.png in Resources */,
-				58F6F1471784809C00BC3B56 /* racaille-ipad.png in Resources */,
-				58F6F149178480F300BC3B56 /* racaille-retina.png in Resources */,
-				58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */,
-				58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */,
+				586B9CD017870CA400C03F1C /* Default.png in Resources */,
+				586B9CD117870CA400C03F1C /* Default@2x.png in Resources */,
+				586B9CD217870CA400C03F1C /* fight.jpg in Resources */,
+				586B9CD317870CA400C03F1C /* icon_gun_active.png in Resources */,
+				586B9CD417870CA400C03F1C /* icon_gun.png in Resources */,
+				586B9CD517870CA400C03F1C /* icon_profile_active.png in Resources */,
+				586B9CD617870CA400C03F1C /* icon_profile.png in Resources */,
+				586B9CD717870CA400C03F1C /* profil.jpg in Resources */,
+				586B9CD817870CA400C03F1C /* racaille-ipad-retina.png in Resources */,
+				586B9CD917870CA400C03F1C /* racaille-ipad.png in Resources */,
+				586B9CDA17870CA400C03F1C /* racaille-retina.png in Resources */,
+				586B9CDB17870CA400C03F1C /* racaille.png in Resources */,
+				586B9CDD17870CEF00C03F1C /* icon-facebook.png in Resources */,
+				586B9CDF17870DE300C03F1C /* icon-twitter.png in Resources */,
+				586B9CE217871BB400C03F1C /* home_active.png in Resources */,
+				586B9CE317871BB400C03F1C /* home.png in Resources */,
+				586B9CE517871D2E00C03F1C /* bg-home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

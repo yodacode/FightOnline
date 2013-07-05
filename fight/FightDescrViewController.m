@@ -19,6 +19,7 @@
 
 @implementation FightDescrViewController
 @synthesize fight;
+@synthesize user;
 @synthesize socialText;
 @synthesize usersAttending;
 
@@ -34,6 +35,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //if([self.user valueForKey:@"name"] == [self.fight valueForKey:@"adminname"]){
+        NSLog(@"%@",[self.user valueForKey:@"name"]);
+    
+
+
 
 }
 
@@ -42,7 +49,12 @@
     if (self.fight) {
         [self initRender];
         
-        
+    }
+    
+    if([self isAdmin]){
+        self.adminButton.hidden = NO;
+    } else {
+        self.adminButton.hidden = YES;
     }
     
     [self.tableView reloadData];
@@ -59,8 +71,6 @@
     return context;
 }
 
-
-
 - (BOOL) isInfight {
     id currentFight = self.fight;
     Fight * thisFight = currentFight;
@@ -74,15 +84,24 @@
     
 }
 
+- (BOOL) isAdmin {
+    if([[self.fight valueForKey:@"adminname"] isEqual: @"Nolimit"]){
+                return YES;
+    }
+    else {
+        return NO;
+    }
+
+}
+
 - (void)initRender {
     
     self.labelName.text = [self.fight valueForKey:@"name"];
     self.labelAddress.text = [self.fight valueForKey:@"address"];
     
-    NSString *fightersnumber = [NSString stringWithFormat:@"%@", [self.fight valueForKey:@"fightersnumber"]];
-    self.labelFightersNumber.text = fightersnumber;
+    self.labelAdminName.text = [self.fight valueForKey:@"adminname"];
     
-    NSString *fightersattending = [NSString stringWithFormat:@"%@ %@", [self.fight valueForKey:@"fightersattending"],@"/"];
+    NSString *fightersattending = [NSString stringWithFormat:@"%@ %@ %@", [self.fight valueForKey:@"fightersattending"],@"/", [self.fight valueForKey:@"fightersnumber"]];
     self.labelFightersAttending.text = fightersattending;
     
     NSDate *fightdate = [self.fight valueForKey:@"datefight"];
@@ -100,13 +119,13 @@
     
     if(dispoValue == value){
         self.labelDispo.textLabel.text = @"Complet";
-        self.labelDispo.textColor=[UIColor redColor];
+        //self.labelDispo.textColor=[UIColor redColor];
         self.cellParticipate.hidden = YES;
     }
     
     if([self isInfight]){
         self.labelDispo.textLabel.text = @"Vous y participez";
-        self.labelDispo.textColor=[UIColor blueColor];
+        //self.labelDispo.textColor=[UIColor blueColor];
         self.cellParticipate.hidden = YES;
     }
     
@@ -125,7 +144,7 @@
         if(dispoValue - 1 == value){
             self.cellParticipate.hidden = YES;
             self.labelDispo.textLabel.text = @"Complet";
-            self.labelDispo.textColor=[UIColor redColor];
+            //self.labelDispo.textColor=[UIColor redColor];
         }
         
         number = [NSNumber numberWithInt:value + 1];        
@@ -204,8 +223,8 @@
         NSSet *users = thisFight.users;
         
         NSMutableArray *usersMutArray =[[NSMutableArray alloc] init];
-        for (User *user in users) {
-            [usersMutArray addObject:user];
+        for (User *use in users) {
+            [usersMutArray addObject:use];
         }
         
         self.usersAttending = usersMutArray;

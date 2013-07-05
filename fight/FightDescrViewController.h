@@ -26,6 +26,9 @@
 - (IBAction)postFacebook:(id)sender;
 - (IBAction)postTwitter:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelAdminName;
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *adminButton;
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *labelDispo;
 @end
