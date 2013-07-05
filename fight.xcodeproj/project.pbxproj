@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5822353B1786FC7E00B95752 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 582235391786FC7E00B95752 /* Default@2x.png */; };
+		5822353C1786FC7E00B95752 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5822353A1786FC7E00B95752 /* Default.png */; };
 		5897481E177090B800FE6C21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481D177090B800FE6C21 /* UIKit.framework */; };
 		58974820177090B800FE6C21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5897481F177090B800FE6C21 /* Foundation.framework */; };
 		58974822177090B800FE6C21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58974821177090B800FE6C21 /* CoreGraphics.framework */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		582235391786FC7E00B95752 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5822353A1786FC7E00B95752 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5897481A177090B800FE6C21 /* fight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5897481D177090B800FE6C21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5897481F177090B800FE6C21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +127,8 @@
 		58974811177090B800FE6C21 = {
 			isa = PBXGroup;
 			children = (
+				582235391786FC7E00B95752 /* Default@2x.png */,
+				5822353A1786FC7E00B95752 /* Default.png */,
 				58E9CA6917783CDB00CDC9F8 /* img */,
 				58974825177090B800FE6C21 /* fight */,
 				5897481C177090B800FE6C21 /* Frameworks */,
@@ -301,6 +307,8 @@
 				58F6F149178480F300BC3B56 /* racaille-retina.png in Resources */,
 				58F6F14B1784813B00BC3B56 /* racaille-ipad-retina.png in Resources */,
 				58F6F14D1784831B00BC3B56 /* profil.jpg in Resources */,
+				5822353B1786FC7E00B95752 /* Default@2x.png in Resources */,
+				5822353C1786FC7E00B95752 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

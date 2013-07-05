@@ -29,11 +29,11 @@
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
 
-    tabBarItem1.title = @"Fight";
-    tabBarItem2.title = @"Profil";
+    tabBarItem2.title = @"Fight";
+    tabBarItem1.title = @"Profil";
     
-    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"icon_gun_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_gun.png"]];
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"icon_profile_active.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"icon_profile.png"]];
     
     return YES;
 }
@@ -78,6 +78,7 @@
     fight.name = @"Street Baston";
     fight.address = @"28 rue Troyon Sevres France";
     fight.datefight = dateFight;
+    fight.adminname = @"La fouine";
     fight.fightersnumber = fightersNumber;
     fight.fightersattending = fighterAttending;
     
@@ -86,6 +87,7 @@
     fight2.name = @"PSG Fight";
     fight2.address = @"Trocadero Paris France";
     fight2.datefight = dateFight;
+    fight2.adminname = @"Booba";
     fight2.fightersnumber = fightersNumber;
     fight2.fightersattending = fighterAttending2;
     
@@ -93,6 +95,7 @@
     Fight *fight3 = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
     fight3.name = @"La sanglante";
     fight3.address = @"Chatelet les Halles Paris";
+    fight3.adminname = @"Booba";
     fight3.datefight = dateFight;
     fight3.fightersnumber = fightersNumber;
     fight3.fightersattending = fighterAttending2;

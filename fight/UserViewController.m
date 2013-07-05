@@ -64,7 +64,7 @@
     self.nameLabel.text = [NSString stringWithFormat:@"%@,%@", [self.user valueForKey:@"name"], [self.user valueForKey:@"firstname"]];
     self.ageLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"age"]];
     self.descriptionLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"profildescr"]];
-    self.descriptionLabel.delegate = self;
+
     
     [self.tableView reloadData];
 }

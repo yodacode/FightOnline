@@ -17,6 +17,7 @@
 @dynamic fightersnumber;
 @dynamic fightersattending;
 @dynamic latitude;
+@dynamic adminname;
 @dynamic longitude;
 @dynamic name;
 @dynamic users;
