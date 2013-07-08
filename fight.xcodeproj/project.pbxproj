@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		582B1FC0178AC30B009C7C5D /* CurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B1FBF178AC30B009C7C5D /* CurrentUser.m */; };
+		582B1FC2178B2A6B009C7C5D /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582B1FC1178B2A6B009C7C5D /* Ipad.storyboard */; };
 		586B9CD017870CA400C03F1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC417870CA400C03F1C /* Default.png */; };
 		586B9CD117870CA400C03F1C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC517870CA400C03F1C /* Default@2x.png */; };
 		586B9CD217870CA400C03F1C /* fight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC617870CA400C03F1C /* fight.jpg */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		582B1FBE178AC30B009C7C5D /* CurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUser.h; sourceTree = "<group>"; };
 		582B1FBF178AC30B009C7C5D /* CurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentUser.m; sourceTree = "<group>"; };
+		582B1FC1178B2A6B009C7C5D /* Ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ipad.storyboard; sourceTree = "<group>"; };
 		586B9CC417870CA400C03F1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = img/Default.png; sourceTree = "<group>"; };
 		586B9CC517870CA400C03F1C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "img/Default@2x.png"; sourceTree = "<group>"; };
 		586B9CC617870CA400C03F1C /* fight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fight.jpg; path = img/fight.jpg; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				5897482F177090B800FE6C21 /* AppDelegate.m */,
 				58974837177090B800FE6C21 /* fight.xcdatamodeld */,
 				5897483F177091D400FE6C21 /* Storyboard.storyboard */,
+				582B1FC1178B2A6B009C7C5D /* Ipad.storyboard */,
 				58974826177090B800FE6C21 /* Supporting Files */,
 			);
 			path = fight;
@@ -352,6 +355,7 @@
 				586B9CE217871BB400C03F1C /* home_active.png in Resources */,
 				586B9CE317871BB400C03F1C /* home.png in Resources */,
 				586B9CE517871D2E00C03F1C /* bg-home.png in Resources */,
+				582B1FC2178B2A6B009C7C5D /* Ipad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
