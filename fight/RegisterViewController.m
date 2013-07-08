@@ -66,7 +66,6 @@
             NSFetchRequest *request = [[NSFetchRequest alloc]init];
             
             [request setEntity:entityDesc];
-            //(lastName like[cd] %@) AND
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"email like %@", self.emailTextField.text];
             [request setPredicate:predicate];
             
@@ -81,6 +80,8 @@
                 [newUser setValue:self.nameTextFiled.text forKey:@"name"];
                 [newUser setValue:self.emailTextField.text forKey:@"email"];
                 [newUser setValue:self.passwordTextField.text forKey:@"password"];
+                [newUser setValue:[NSNumber numberWithInteger:[self.ageTextField.text integerValue]] forKey:@"age"];
+                [newUser setValue:@"Ici la description du passé violent de l'utilisateur" forKey:@"profildescr"];
                 
                 [context save:&error];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Utilisateur ajouté" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

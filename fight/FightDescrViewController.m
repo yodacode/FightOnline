@@ -72,15 +72,26 @@
 }
 
 - (BOOL) isInfight {
+    
+    
     id currentFight = self.fight;
     Fight * thisFight = currentFight;
     NSSet *users = thisFight.users;
+    NSLog(@"%d", users.count);
     
-    if(users.count > 0) {
-        return YES;
-    } else {
-        return NO;
+    
+    CurrentUser *CU=[CurrentUser getInstance];
+
+    NSString * currentEmail =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"email"] firstObject]];
+    
+    for (User *cuser in users) {
+        if( [cuser.email isEqualToString:currentEmail]){
+           return YES;
+        }
     }
+    
+    return NO;
+    
     
 }
 
