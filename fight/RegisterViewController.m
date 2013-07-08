@@ -85,6 +85,7 @@
                 [context save:&error];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inscription" message:@"Utilisateur ajouté" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
+                [self performSegueWithIdentifier: @"Login" sender: self];
                 [self.navigationController dismissViewControllerAnimated:YES completion:nil];
                 
             }else{

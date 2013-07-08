@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582B1FC0178AC30B009C7C5D /* CurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 582B1FBF178AC30B009C7C5D /* CurrentUser.m */; };
 		586B9CD017870CA400C03F1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC417870CA400C03F1C /* Default.png */; };
 		586B9CD117870CA400C03F1C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC517870CA400C03F1C /* Default@2x.png */; };
 		586B9CD217870CA400C03F1C /* fight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586B9CC617870CA400C03F1C /* fight.jpg */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		582B1FBE178AC30B009C7C5D /* CurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentUser.h; sourceTree = "<group>"; };
+		582B1FBF178AC30B009C7C5D /* CurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentUser.m; sourceTree = "<group>"; };
 		586B9CC417870CA400C03F1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = img/Default.png; sourceTree = "<group>"; };
 		586B9CC517870CA400C03F1C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "img/Default@2x.png"; sourceTree = "<group>"; };
 		586B9CC617870CA400C03F1C /* fight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fight.jpg; path = img/fight.jpg; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 		586B9CEC1787677800C03F1C /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				582B1FBE178AC30B009C7C5D /* CurrentUser.h */,
+				582B1FBF178AC30B009C7C5D /* CurrentUser.m */,
 				586B9CE91787677200C03F1C /* RegisterViewController.h */,
 				586B9CEA1787677200C03F1C /* RegisterViewController.m */,
 				586B9CE61787556D00C03F1C /* HomeViewController.h */,
@@ -374,6 +379,7 @@
 				58F6F13F17844FE100BC3B56 /* FightAttendingViewController.m in Sources */,
 				586B9CE81787556D00C03F1C /* HomeViewController.m in Sources */,
 				586B9CEB1787677300C03F1C /* RegisterViewController.m in Sources */,
+				582B1FC0178AC30B009C7C5D /* CurrentUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "CurrentUser.h"
 
 @interface HomeViewController ()
 @end
@@ -29,14 +30,20 @@
 	// Do any additional setup after loading the view.
     self.loginTextField.delegate = self;
     self.passwordTextField.delegate = self;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     if(self.isLoged){
         self.tabBarController.tabBar.hidden = NO;
+        self.ContentLogin.hidden = YES;
+        self.labelIntro.text = @"Vous êtes connecté";
     } else {
         self.tabBarController.tabBar.hidden = YES;
+        self.ContentLogin.hidden = NO;
+        self.labelIntro.text = @"Connectez vous";
     }
 
 }
@@ -67,11 +74,18 @@
         [alert show];
         
     }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion" message:@"C GOOD" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connexion" message:@"Vous êtes connecté" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-        //[self performSegueWithIdentifier:@"figths" sender:self];
+        
+        CurrentUser *CU=[CurrentUser getInstance];
+        CU.name= [matchingData valueForKey:@"name"];
+        CU.email = [matchingData valueForKey:@"email"];
+        CU.firstname = [matchingData valueForKey:@"firstname"];
+        
         self.isLoged = YES;
         self.tabBarController.tabBar.hidden = NO;
+        self.ContentLogin.hidden = YES;
+        self.labelIntro.text = @"Vous êtes connecté";
     }
     
 }

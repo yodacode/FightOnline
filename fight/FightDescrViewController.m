@@ -12,6 +12,7 @@
 #import "FightAttendingViewController.h"
 #import "User.h"
 #import "Fight.h"
+#import "CurrentUser.h"
 
 @interface FightDescrViewController ()
 
@@ -36,9 +37,8 @@
 {
     [super viewDidLoad];
     
-    //if([self.user valueForKey:@"name"] == [self.fight valueForKey:@"adminname"]){
-        NSLog(@"%@",[self.user valueForKey:@"name"]);
     
+
 
 
 
@@ -85,7 +85,12 @@
 }
 
 - (BOOL) isAdmin {
-    if([[self.fight valueForKey:@"adminname"] isEqual: @"Nolimit"]){
+    
+    CurrentUser *CU=[CurrentUser getInstance];
+
+    NSString * name =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"name"] firstObject]];
+
+    if([[self.fight valueForKey:@"adminname"] isEqual: name]){
                 return YES;
     }
     else {
@@ -150,11 +155,16 @@
         number = [NSNumber numberWithInt:value + 1];        
         [self.fight setValue:number forKey:@"fightersattending"];
         
+        CurrentUser *CU=[CurrentUser getInstance];
+        
+        NSString * firstname =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"firstname"] firstObject]];
+        NSString * name =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"name"] firstObject]];
+        NSString * email =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"email"] firstObject]];
         
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@ and email like %@", firstname, name, email];
         [fetchRequest setEntity:entity];
         [fetchRequest setPredicate:predicate];
         NSError *error0 = nil;
@@ -174,7 +184,6 @@
         // Set relationships
        [user2 addFightsObject:fight2];
         //[fight addUsersObject:user];
-        
         
         
         NSError *error = nil;

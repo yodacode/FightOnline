@@ -7,6 +7,7 @@
 //
 
 #import "FightDetailViewController.h"
+#import "CurrentUser.h"
 
 @interface FightDetailViewController ()
 
@@ -72,6 +73,10 @@
         
     } else {
         // Create a new fight
+        CurrentUser *CU=[CurrentUser getInstance];
+        NSString * name =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"name"] firstObject]];
+        
+        
         NSManagedObject *newFight = [NSEntityDescription insertNewObjectForEntityForName:@"Fight" inManagedObjectContext:context];
         [newFight setValue:self.nameTextField.text forKey:@"name"];
         [newFight setValue:self.addressTextField.text forKey:@"address"];
@@ -79,7 +84,7 @@
         
         NSDate * dateForFight = self.dateFight.date;
         [newFight setValue:dateForFight forKey:@"datefight"];
-        [newFight setValue:@"Nolimit" forKey:@"adminname"];
+        [newFight setValue:name forKey:@"adminname"];
         
         
     }

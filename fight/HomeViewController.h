@@ -10,7 +10,9 @@
 
 @interface HomeViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *loginTextField;
+@property (weak, nonatomic) IBOutlet UILabel *labelIntro;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIView *ContentLogin;
 @property (nonatomic) BOOL isLoged;
 - (IBAction)loginButton:(id)sender;
 @end

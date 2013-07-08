@@ -12,6 +12,7 @@
 #import "UserCreatedViewController.h"
 #import "User.h"
 #import "Fight.h"
+#import "CurrentUser.h"
 
 @interface UserViewController ()
 
@@ -51,6 +52,9 @@
 {
     [super viewDidAppear:animated];    
     
+    
+
+    
     [self initFightsAttendingForSegue];
     [self initFightsCreatedForSegue];
     
@@ -65,6 +69,8 @@
     self.ageLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"age"]];
     self.descriptionLabel.text = [NSString stringWithFormat:@"%@", [self.user valueForKey:@"profildescr"]];
 
+    //obj.name= [matchingData valueForKey:@"name"];
+    
     
     [self.tableView reloadData];
 }
@@ -75,6 +81,7 @@
 }
 
 - (void) initFightsCreatedForSegue {
+
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:[NSEntityDescription entityForName:@"Fight" inManagedObjectContext:context]];
@@ -94,11 +101,19 @@
 }
 
 - (void) initFightsAttendingForSegue {
-
+    
+    CurrentUser *CU=[CurrentUser getInstance];
+    
+    NSLog( @"%@" , [[CU valueForKey:@"name"] firstObject]);
+    
+    NSString * firstname =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"firstname"] firstObject]];
+    NSString * name =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"name"] firstObject]];
+    NSString * email =  [NSString stringWithFormat:@"%@" , [[CU valueForKey:@"email"] firstObject]];
+    
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@ and email like %@", firstname, name, email];
     [fetchRequest setEntity:entity];
     [fetchRequest setPredicate:predicate];
     

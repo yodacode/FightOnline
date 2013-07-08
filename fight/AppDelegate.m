@@ -20,8 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-   //[self create];
-    [self read];
+   [self create];
     // Assign tab bar item with titles
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -45,6 +44,18 @@
 - (void) create {
     // Grab the context
     NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    
+    [request setEntity:entityDesc];
+    
+    NSError *error;
+    NSArray *matchingData = [context executeFetchRequest:request error:&error];
+    
+    //test if data test exist
+    if(matchingData.count <=0){
+    
     
     //Create current user
     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
@@ -127,49 +138,13 @@
     } else {
         NSLog(@"The save wasn't successful: %@", [error userInfo]);
     }
-}
-
-
-
-
-
-- (void) read {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    // Construct a fetch request
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
-                                              inManagedObjectContext:context];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname like %@ and name like %@", @"Fred", @"Nolimit"];
-    [fetchRequest setEntity:entity];
-    [fetchRequest setPredicate:predicate];
-    
-    NSError *error = nil;
-    //NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    id currentUser = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-    
-    User * user = currentUser;
-    
-    NSSet *fights = user.fights;
-    for (Fight *fight in fights) {
-        NSLog(@"\t\t%@ ", fight.name);
         
     }
-    
-    /*for (User *user in fetchedObjects) {
-        // Log the label details
-        
-        NSLog(@"%@, %@ ", user.name, user.firstname);
-        
-        NSLog(@"\tA organisé la fight:");
-        NSSet *fights = user.fights;
-        for (Fight *fight in fights) {
-            NSLog(@"\t\t%@ ", fight.name);
-            
-        }
-    }*/
 }
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
